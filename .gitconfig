@@ -1,0 +1,38 @@
+# This is Git's per-user configuration file.
+[user]
+name = Ritwik 
+email = ritwikvd@gmail.com
+
+[pull]
+rebase = true
+
+[merge]
+conflictstyle = diff3
+
+[rerere]
+enabled = true
+
+[alias]
+s = status
+l = log --oneline --graph
+c = commit
+b = branch
+bd = branch -D
+p = push
+pu = push -u
+puo = push -u origin
+sw = switch
+swc = switch -c
+r = restore
+rs = reset --soft
+rm = reset
+rh = reset --hard
+sl = stash list
+sd = stash drop stash@{0}
+spo = stash pop
+spu = stash push
+can = commit --amend --no-edit
+cp = cherry-pick
+
+[core]
+autocrlf = false
