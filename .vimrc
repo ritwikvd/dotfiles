@@ -28,6 +28,3 @@ nnoremap <leader>d <C-d>
 nnoremap <leader>u <C-u>
 nnoremap <leader>6 <C-^>
 nnoremap <leader>w <C-w>
-inoremap <C-q> <Esc>
-vnoremap <C-q> <Esc>
-cnoremap <C-q> <Esc>
