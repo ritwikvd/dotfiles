@@ -35,8 +35,9 @@ let mapleader = " "
 nnoremap <leader><CR> :so ~/.vimrc<CR>
 nnoremap <leader>p :GFiles<CR>
 nnoremap <leader>f :Files<CR>
-nnoremap <leader>cn :cnext<CR>
-nnoremap <leader>cp :cprev<CR>
+nnoremap <leader>j :cnext<CR>
+nnoremap <leader>k :cprev<CR>
+nnoremap <leader>h :copen<CR>
 nnoremap <leader>i <C-i>
 nnoremap <leader>o <C-o>
 nnoremap <leader>d <C-d>
@@ -44,3 +45,9 @@ nnoremap <leader>u <C-u>
 nnoremap <leader>6 <C-^>
 nnoremap <leader>w <C-w>
 nnoremap <leader>4 $
+nnoremap <leader>c "+y
+vnoremap <leader>c "+y
+nnoremap <leader>e :Vex<CR>
+
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
