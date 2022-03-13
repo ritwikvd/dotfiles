@@ -38,12 +38,7 @@ nnoremap <leader>f :Files<CR>
 nnoremap <leader>j :cnext<CR>
 nnoremap <leader>k :cprev<CR>
 nnoremap <leader>h :copen<CR>
-nnoremap <leader>i <C-i>
-nnoremap <leader>o <C-o>
-nnoremap <leader>d <C-d>
-nnoremap <leader>u <C-u>
 nnoremap <leader>6 <C-^>
-nnoremap <leader>w <C-w>
 nnoremap <leader>4 $
 nnoremap <leader>c "+y
 vnoremap <leader>c "+y
