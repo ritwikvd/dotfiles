@@ -33,7 +33,7 @@ spo = stash pop
 spu = stash push
 can = commit --amend --no-edit
 cp = cherry-pick
-acp = "!git add . && git c -m \"$1\" && git puo \"$(git rev-parse --abbrev-ref HEAD)\" #"
+acp = "!git add . && git c -m \"$1\" && git puo $(git rev-parse --abbrev-ref HEAD) #"
 
 [core]
 autocrlf = false
