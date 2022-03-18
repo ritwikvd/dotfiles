@@ -32,7 +32,7 @@ let ayucolor="light"
 colorscheme ayu
 
 let mapleader = " "
-nnoremap <leader><CR> :so ~/.vimrc<CR>
+nnoremap <leader><CR> :so %<CR>
 nnoremap <leader>p :GFiles<CR>
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>j :cnext<CR>
