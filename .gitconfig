@@ -33,7 +33,9 @@ spo = stash pop
 spu = stash push
 can = commit --amend --no-edit
 cp = cherry-pick
-acp = "!git add . && git c -m \"$1\" && git puo $(git rev-parse --abbrev-ref HEAD) #"
+acp = "!read -r -p \"Commit Message: \" message && git add . && git c -m $message && git puo $(git rev-parse --abbrev-ref HEAD)"
+acnp = "!git add . && git can && git p -f"
+sacp = "!read -r -p \"Branch Name: \" branch && read -r -p \"Commit Message: \" message && git swc $branch && git add . && git c -m \"$message\" && git puo $branch && git sw -"
 
 [core]
 autocrlf = false
