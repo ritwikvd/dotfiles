@@ -33,8 +33,8 @@ spo = stash pop
 spu = stash push
 can = commit --amend --no-edit
 cp = cherry-pick
-acp = "!read -r -p \"Commit Message: \" message && git add . && git c -m \"$message\" && git p"
-acpo = "!read -r -p \"Commit Message: \" message && git add . && git c -m \"$message\" && git puo $(git rev-parse --abbrev-ref HEAD)"
+acp = "!read -rp \"Commit Message: \" message && git add . && git c -m \"$message\" && git p"
+acpo = "!read -rp \"Commit Message: \" message && git add . && git c -m \"$message\" && git puo $(git rev-parse --abbrev-ref HEAD)"
 acnp = "!git add . && git can && git p -f"
 sacp = "!read -rp \"Branch Name: \" branch && read -rp \"Commit Message: \" message && read -rp \"Delete Branch (y|n): \" delete && git swc $branch && git add . && git c -m \"$message\" && git puo $branch && git sw - && test $delete=y && git bd $branch"
 
