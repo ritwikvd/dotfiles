@@ -5,3 +5,8 @@ function set_win_title(){
 }
 
 precmd_functions+=(set_win_title)
+
+bindkey '^[b' backward-word
+
+# ZSH Aliases
+alias -g ls="ls -Flsah"
