@@ -35,7 +35,7 @@ colorscheme ayu
 "Autocmd
 augroup dotfiles_sync
     au!
-    au BufWritePost ~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc :!updotfiles %
+    au BufWritePost ~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc silent :!updotfiles %
 augroup end
 
 let mapleader = " "
