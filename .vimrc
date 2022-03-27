@@ -32,6 +32,12 @@ set termguicolors
 let ayucolor="light"
 colorscheme ayu
 
+"Autocmd
+augroup dotfiles_sync
+    au!
+    au BufWritePost ~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc :!updotfiles %
+augroup end
+
 let mapleader = " "
 nnoremap <leader><CR> :so %<CR>
 nnoremap <leader>p :GFiles<CR>
