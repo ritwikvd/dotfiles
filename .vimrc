@@ -51,8 +51,8 @@ nnoremap <leader>4 $
 nnoremap <leader>c "+y
 vnoremap <leader>c "+y
 nnoremap <leader>e :Vex<CR>
-nnoremap <M> <C>
-nnoremap <A> <C>
+inoremap <M> <C>
+inoremap <A> <C>
 vnoremap <M> <C>
 vnoremap <A> <C>
 
