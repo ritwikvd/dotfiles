@@ -51,6 +51,8 @@ nnoremap <leader>4 $
 nnoremap <leader>c "+y
 vnoremap <leader>c "+y
 nnoremap <leader>e :Vex<CR>
+nnoremap <M> <C>
+vnoremap <M> <C>
 
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
