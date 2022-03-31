@@ -6,6 +6,7 @@ function set_win_title(){
 
 precmd_functions+=(set_win_title)
 
+bindkey -v
 bindkey '^[b' backward-word
 bindkey '^R' history-incremental-search-backward
 
