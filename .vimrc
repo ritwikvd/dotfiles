@@ -47,10 +47,11 @@ nnoremap <leader>j :cnext<CR>
 nnoremap <leader>k :cprev<CR>
 nnoremap <leader>h :copen<CR>
 nnoremap <leader>6 <C-^>
-nnoremap <leader>4 $
 nnoremap <leader>c "+y
 vnoremap <leader>c "+y
 nnoremap <leader>e :Vex<CR>
+nnoremap <C-j> _
+nnoremap <C-k> $
 inoremap <M> <C>
 inoremap <A> <C>
 vnoremap <M> <C>
