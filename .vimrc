@@ -45,13 +45,13 @@ nnoremap <leader>p :GFiles<CR>
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>j :cnext<CR>
 nnoremap <leader>k :cprev<CR>
-nnoremap <leader>h :copen<CR>
+nnoremap <leader>o :copen<CR>
 nnoremap <leader>6 <C-^>
 nnoremap <leader>c "+y
 vnoremap <leader>c "+y
 nnoremap <leader>e :Vex<CR>
-nnoremap <C-h> _
-nnoremap <C-l> $
+nnoremap <leader>h _
+nnoremap <leader>l $
 
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
