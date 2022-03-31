@@ -50,8 +50,8 @@ nnoremap <leader>6 <C-^>
 nnoremap <leader>c "+y
 vnoremap <leader>c "+y
 nnoremap <leader>e :Vex<CR>
-nnoremap <C-j> _
-nnoremap <C-k> $
+nnoremap <C-h> _
+nnoremap <C-l> $
 
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
