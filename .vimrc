@@ -52,10 +52,6 @@ vnoremap <leader>c "+y
 nnoremap <leader>e :Vex<CR>
 nnoremap <C-j> _
 nnoremap <C-k> $
-inoremap <M> <C>
-inoremap <A> <C>
-vnoremap <M> <C>
-vnoremap <A> <C>
 
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
