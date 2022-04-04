@@ -31,8 +31,8 @@ colorscheme ayu
 "Autocmd
 augroup dotfiles_sync
     au!
-    au BufWritePost ~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc silent :!updotfiles %
-    au BufWritePost ~/Desktop/personal/PushOwl/dashboard/* silent :!yarn prettier --write %:p
+    au BufWritePost ~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc silent! :!updotfiles %
+    au BufWritePost ~/Desktop/personal/PushOwl/dashboard/* silent! execute "!yarn prettier --write %:p" | !redraw 
 augroup end
 
 "Remaps
