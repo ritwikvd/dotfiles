@@ -47,6 +47,7 @@ nnoremap <leader>a <C-^>
 nnoremap <leader>c "+y
 nnoremap <leader>e :Vex<CR>
 nnoremap <leader>s :w<CR>
+nnoremap <leader>q :q<CR>
 
 vnoremap <leader>c "+y
 vnoremap J :m '>+1<CR>gv=gv
