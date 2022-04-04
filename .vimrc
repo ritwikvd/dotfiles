@@ -1,4 +1,5 @@
 "Set Options
+set autoread
 set scrolloff=12
 set rnu
 set number
