@@ -1,5 +1,3 @@
-echo ">^.^<"
-
 "Set Options
 set autoread
 set scrolloff=12
