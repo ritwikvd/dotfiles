@@ -12,3 +12,4 @@ bindkey '^R' history-incremental-search-backward
 
 # ZSH Aliases
 alias -g ls="ls -Flsah"
+alias -g cddash="cd ~/Desktop/personal/PushOwl/dashboard/"
