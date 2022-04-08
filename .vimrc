@@ -11,6 +11,7 @@ set smartindent
 set hls ic is
 set termguicolors
 let ayucolor="light"
+let background=light
 
 "Settings
 let g:netrw_bufsettings = 'noma nomod nonu nowrap ro nobl nu rnu'
