@@ -11,16 +11,15 @@ set smartindent
 set hls ic is
 set termguicolors
 set background=light
-set background=light
 
 "Settings
 let g:netrw_bufsettings = 'noma nomod nonu nowrap ro nobl nu rnu'
+let g:gruvbox_contrast_light='hard'
 
 "1: blinking block  2: solid block  3: blinking underscore  4: solid underscore  5: blinking vertical bar 6: solid vertical bar
 let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[3 q" "SR = REPLACE mode
 let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
-let g:gruvbox_contrast_light='hard'
 
 "Plugins
 call plug#begin('~/.vim/plugged')
@@ -34,7 +33,7 @@ autocmd vimenter * ++nested colorscheme gruvbox
 augroup dotfiles_sync
     au!
     au BufWritePost ~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc silent! !updotfiles %
-    au BufWritePost ~/Desktop/personal/PushOwl/dashboard/* silent! execute "!yarn --silent prettier --write --loglevel silent --config ~/.prettierrc %:p" | redraw! 
+    au BufWritePost ~/Desktop/personal/pushowl/dashboard/* silent! execute "!yarn --silent prettier --write --loglevel silent --config ~/.prettierrc %:p" | redraw! 
 augroup end
 
 "Remaps
