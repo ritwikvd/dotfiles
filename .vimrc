@@ -11,6 +11,7 @@ set smartindent
 set hls ic is
 set termguicolors
 set background=light
+set background=light
 
 "Settings
 let g:netrw_bufsettings = 'noma nomod nonu nowrap ro nobl nu rnu'
@@ -19,16 +20,14 @@ let g:netrw_bufsettings = 'noma nomod nonu nowrap ro nobl nu rnu'
 let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[3 q" "SR = REPLACE mode
 let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
+let g:gruvbox_contrast_light='hard'
 
 "Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'ayu-theme/ayu-vim'
 Plug 'morhetz/gruvbox'
 call plug#end()
-
-"colorscheme ayu
 
 "Autocmd
 autocmd vimenter * ++nested colorscheme gruvbox
