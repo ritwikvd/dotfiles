@@ -1,5 +1,4 @@
 "Set Options
-set autochdir
 set autoread
 set scrolloff=12
 set rnu
