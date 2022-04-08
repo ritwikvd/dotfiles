@@ -9,6 +9,8 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set hls ic is
+set termguicolors
+let ayucolor="light"
 
 "Settings
 let g:netrw_bufsettings = 'noma nomod nonu nowrap ro nobl nu rnu'
@@ -23,13 +25,13 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ayu-theme/ayu-vim'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
-set termguicolors
-let ayucolor="light"
-colorscheme ayu
+"colorscheme ayu
 
 "Autocmd
+autocmd vimenter * ++nested colorscheme gruvbox
 augroup dotfiles_sync
     au!
     au BufWritePost ~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc silent! !updotfiles %
