@@ -49,7 +49,11 @@ nnoremap <leader>c "+y
 nnoremap <leader>e :Vex<CR>
 nnoremap <leader>s :w<CR>
 nnoremap <leader>q :q<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
 
+vnoremap <C-t> :NERDTreeToggle<CR>
 vnoremap <leader>c "+y
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+
+inoremap <C-t> :NERDTreeToggle<CR>
