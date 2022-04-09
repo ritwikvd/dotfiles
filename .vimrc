@@ -12,8 +12,9 @@ set termguicolors
 set background=light
 
 "Settings
-let g:netrw_bufsettings = 'noma nomod nonu nowrap ro nobl nu rnu'
+let g:netrw_bufsettings='noma nomod nonu nowrap ro nobl nu rnu'
 let g:gruvbox_contrast_light='hard'
+let NERDTreeShowHidden=1
 
 "1: blinking block  2: solid block  3: blinking underscore  4: solid underscore  5: blinking vertical bar 6: solid vertical bar
 let &t_SI.="\e[5 q" "SI = INSERT mode
