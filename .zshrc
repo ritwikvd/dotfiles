@@ -14,3 +14,4 @@ bindkey '^R' history-incremental-search-backward
 alias -g ls="ls -Flsah"
 alias -g cddash="cd ~/Desktop/personal/pushowl/dashboard/"
 alias -g lctl="launchctl"
+alias -g cl="clear"
