@@ -9,7 +9,6 @@ set expandtab
 set smartindent
 set hls ic is
 set background=light
-colorscheme gruvbox
 
 "Settings
 let g:netrw_bufsettings='noma nomod nonu nowrap ro nobl nu rnu'
@@ -29,6 +28,7 @@ Plug 'preservim/nerdtree'
 Plug 'gruvbox-community/gruvbox'
 call plug#end()
 
+colorscheme gruvbox
 
 "Autocmd
 augroup dotfiles_sync
