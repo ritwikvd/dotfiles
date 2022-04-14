@@ -24,6 +24,7 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 call plug#begin('~/.vim/plugged')
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'preservim/nerdtree'
 Plug 'gruvbox-community/gruvbox'
 call plug#end()
