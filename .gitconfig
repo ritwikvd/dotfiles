@@ -37,7 +37,7 @@ acp = "!read -rp \"Commit Message: \" message && git add . && git c -m \"$messag
 acpo = "!read -rp \"Commit Message: \" message && git add . && git c -m \"$message\" && git puo $(git rev-parse --abbrev-ref HEAD)"
 acnp = "!git add . && git can && git p -f"
 sacp = "!read -rp \"Branch Name: \" branch && read -rp \"Commit Message: \" message && read -rp \"Delete Branch (y|!y): \" delete && git swc $branch && git add . && git c -m \"$message\" && git puo $branch && git sw - && test $delete = y && git bd $branch"
-db = "!delete_branch=$(read -rp \"Regex To Delete Branch: \" identifier && git b | grep -E \"$identifier\" | tr -d ' ') && read -rp \"Confirm: \"$delete_branch\"? (y|!y) \" confirm && test $confirm = y && git bd $delete_branch"
+db = "!delete_branch=$(read -rp \"Regex To Delete Branch: \" identifier && git b | grep -E \"$identifier\" | tr -d ' ') && read -rp \"Confirm: $delete_branch ? (y|!y) \" confirm && test $confirm = y && git bd $delete_branch"
 
 [core]
 autocrlf = false
