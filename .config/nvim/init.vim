@@ -22,8 +22,8 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
 "Plugins
 call plug#begin('~/.vim/plugged')
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'preservim/nerdtree'
 Plug 'gruvbox-community/gruvbox'
 call plug#end()
