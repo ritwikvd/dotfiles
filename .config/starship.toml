@@ -25,7 +25,7 @@ show_always=true
 
 [character]
 success_symbol = "[➜](bold green) "
-vicmd_symbol = "[➜](bold cyan) "
+vicmd_symbol = "[➜](bold purple) "
 error_symbol = "[✗](bold red) "
 
 [line_break]
