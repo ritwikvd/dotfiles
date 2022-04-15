@@ -51,6 +51,7 @@ nnoremap <leader>e :Vex<CR>
 nnoremap <leader>s :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <leader>f gg=G
 
 vnoremap <C-n> :NERDTreeToggle<CR>
 vnoremap <leader>c "+y
