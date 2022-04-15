@@ -52,6 +52,8 @@ nnoremap <leader>s :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <leader>f gg=G
+nnoremap <leader>h _
+nnoremap <leader>l $
 
 vnoremap <C-n> :NERDTreeToggle<CR>
 vnoremap <leader>c "+y
