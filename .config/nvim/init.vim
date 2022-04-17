@@ -39,7 +39,7 @@ augroup dotfiles_sync
 augroup end
 
 "Remaps
-let mapleader = "<C-l>"
+let mapleader = " "
 nnoremap <leader><CR> :so %<CR>
 nnoremap <leader>p :Telescope find_files<CR>
 nnoremap <leader>j :cnext<CR>
