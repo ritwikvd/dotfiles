@@ -13,6 +13,7 @@ set background=light
 "Settings
 let g:netrw_bufsettings='noma nomod nonu nowrap ro nobl nu rnu'
 let g:gruvbox_contrast_light='hard'
+let g:NERDTreeShowLineNumbers=1
 let NERDTreeShowHidden=1
 
 "1: blinking block  2: solid block  3: blinking underscore  4: solid underscore  5: blinking vertical bar 6: solid vertical bar
@@ -35,6 +36,10 @@ colorscheme gruvbox
 augroup dotfiles_sync
     au!
     au BufWritePost ~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc,~/.config/nvim/init.vim,~/.config/starship.toml,~/.tmux.conf silent! !updotfiles %
+augroup end
+
+augroup linting
+    au!
     au BufWritePost ~/Desktop/personal/pushowl/dashboard/* silent! execute "!yarn --silent prettier --write --loglevel silent --config ~/.prettierrc %:p" | redraw! 
 augroup end
 
