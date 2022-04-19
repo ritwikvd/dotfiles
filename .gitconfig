@@ -34,7 +34,7 @@ can = commit --amend --no-edit
 cp = cherry-pick
 acp = "!acp"
 sacp = "!sacp"
-db = "!delete_branch=$(read -rp \"Regex To Delete Branch: \" identifier && git b |  rg \"$identifier\" | tr -d ' ') && read -rp \"Confirm: $(echo $delete_branch | tr '\n' ' ') ? (y|!y) \" confirm && test $confirm = y && git bd $delete_branch"
+db = "!db"
 sw = switch
 
 [core]
