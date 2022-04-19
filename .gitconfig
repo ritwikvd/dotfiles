@@ -32,7 +32,6 @@ spo = stash pop
 spu = stash push
 can = commit --amend --no-edit
 cp = cherry-pick
-#acp = "!read -rp \"Commit Message: \" message && git add . && git c -m \"$message\" && git p"
 acp = "!acp"
 sacp = "!read -rp \"Branch Name: \" branch && read -rp \"Commit Message: \" message && read -rp \"Delete Branch (y|!y): \" delete && git swc $branch && git add . && git c -m \"$message\" && git puo $branch && git sw - && test $delete = y && git bd $branch"
 db = "!delete_branch=$(read -rp \"Regex To Delete Branch: \" identifier && git b |  rg \"$identifier\" | tr -d ' ') && read -rp \"Confirm: $(echo $delete_branch | tr '\n' ' ') ? (y|!y) \" confirm && test $confirm = y && git bd $delete_branch"
