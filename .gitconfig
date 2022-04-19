@@ -21,7 +21,6 @@ bd = branch -D
 p = push
 pu = push -u
 puo = push -u origin
-sw = switch
 swc = switch -c
 r = restore
 rs = reset --soft
@@ -38,6 +37,7 @@ acpo = "!read -rp \"Commit Message: \" message && git add . && git c -m \"$messa
 acnp = "!git add . && git can && git p -f"
 sacp = "!read -rp \"Branch Name: \" branch && read -rp \"Commit Message: \" message && read -rp \"Delete Branch (y|!y): \" delete && git swc $branch && git add . && git c -m \"$message\" && git puo $branch && git sw - && test $delete = y && git bd $branch"
 db = "!delete_branch=$(read -rp \"Regex To Delete Branch: \" identifier && git b | grep -E \"$identifier\" | tr -d ' ') && read -rp \"Confirm: $(echo $delete_branch | tr '\n' ' ') ? (y|!y) \" confirm && test $confirm = y && git bd $delete_branch"
+sw = "!branch=$(read -rp \"Regex: \" identifier && git b -a | grep -E \"$identifier\" | tr -d ' ') && read -rp \"Confirm: $(echo $branch | tr '\n' ' ') ? (y|!y) \" confirm && test $confirm = y && git switch $branch"
 
 [core]
 autocrlf = false
