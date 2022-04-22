@@ -35,7 +35,7 @@ cp = cherry-pick
 acp = "!acp"
 sacp = "!sacp"
 db = "!db"
-sw = switch
+sw = "!sw"
 
 [core]
 autocrlf = false
