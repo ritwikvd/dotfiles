@@ -60,7 +60,7 @@ nnoremap <leader>c "+y
 nnoremap <leader>e :Vex<CR>
 nnoremap <leader>s :w<CR>
 nnoremap <leader>q :q!<CR>
-nnoremap <expr> <C-n> g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% = '' ? ':NERDTreeOpen<CR>' : ':NERDTreeFind<CR>'
+nnoremap <expr> <C-n> g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTreeOpen<CR>' : ':NERDTreeFind<CR>'
 nnoremap <leader>f gg=G
 nnoremap <leader>h _
 nnoremap <leader>l $
