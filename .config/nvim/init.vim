@@ -33,9 +33,10 @@ call plug#end()
 colorscheme gruvbox
 
 "Autocmd
-augroup dotfiles_sync
+augroup bin_dotfiles_sync
     au!
     au BufWritePost ~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc,~/.config/nvim/init.vim,~/.config/starship.toml,~/.tmux.conf,/usr/local/bin/sw silent! !updotfiles %
+    au BufWritePost /usr/local/bin/sw,/usr/local/bin/acp,/usr/local/bin/sacp,/usr/local/bin/mer,/usr/local/bin/db,/usr/local/bin/node_numbered_output,/usr/local/bin/updotfiles,/usr/local/bin/upbin silent! !upbin %
 augroup end
 
 augroup linting
