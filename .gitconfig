@@ -1,43 +1,44 @@
 # This is Git's per-user configuration file.
 [user]
-name = Ritwik 
-email = ritwikvd@gmail.com
+    name = Ritwik 
+    email = ritwikvd@gmail.com
 
 [pull]
-rebase = true
+    rebase = true
 
 [merge]
-conflictstyle = diff3
+    conflictstyle = diff3
 
 [rerere]
-enabled = true
+    enabled = true
 
 [alias]
-s = status
-l = log --oneline --graph
-c = commit
-b = branch
-bd = branch -D
-p = push
-pl = pull
-plp = pull -p
-pu = push -u
-puo = push -u origin
-swc = switch -c
-r = restore
-rs = reset --soft
-rmm = reset
-rh = reset --hard
-sl = stash list
-sd = stash drop stash@{0}
-spo = stash pop
-spu = stash push
-can = commit --amend --no-edit
-cp = cherry-pick
-acp = "!acp"
-sacp = "!sacp"
-db = "!db"
-sw = "!sw"
+    s = status
+    l = log --oneline --graph
+    c = commit
+    b = branch
+    bd = branch -D
+    p = push
+    pl = pull
+    plp = pull -p
+    pu = push -u
+    puo = push -u origin
+    swc = switch -c
+    r = restore
+    rs = reset --soft
+    rmm = reset
+    rh = reset --hard
+    sl = stash list
+    sd = stash drop stash@{0}
+    spo = stash pop
+    spu = stash push
+    can = commit --amend --no-edit
+    cp = cherry-pick
+    acp = "!acp"
+    sacp = "!sacp"
+    db = "!db"
+    sw = "!sw"
+    mer = "!mer"
 
 [core]
-autocrlf = false
+    autocrlf = false
