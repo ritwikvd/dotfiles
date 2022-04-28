@@ -35,7 +35,7 @@ colorscheme gruvbox
 "Autocmd
 augroup bin_dotfiles_sync
     au!
-    au BufWritePost ~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc,~/.config/nvim/init.vim,~/.config/starship.toml,~/.tmux.conf,/usr/local/bin/sw silent! !updotfiles %
+    au BufWritePost ~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc,~/.config/nvim/init.vim,~/.config/starship.toml,~/.tmux.conf silent! !updotfiles %
     au BufWritePost /usr/local/bin/* silent! !upbin %
 augroup end
 
