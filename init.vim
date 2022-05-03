@@ -74,7 +74,7 @@ augroup end
 "Remaps
 let mapleader = " "
 nnoremap <leader><CR> :so %<CR>
-nnoremap <leader>p :Telescope find_files<CR>
+nnoremap <M-p> :Telescope find_files<CR>
 nnoremap <leader>j :cnext<CR>
 nnoremap <leader>k :cprev<CR>
 nnoremap <M-k> :copen<CR>
