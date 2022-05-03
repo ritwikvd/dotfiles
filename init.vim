@@ -9,6 +9,7 @@ set expandtab
 set smartindent
 set hls ic is
 set background=light
+set signcolumn=yes
 
 "Settings
 let g:netrw_bufsettings='noma nomod nonu nowrap ro nobl nu rnu'
