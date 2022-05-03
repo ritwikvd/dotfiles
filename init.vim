@@ -41,25 +41,8 @@ call plug#end()
 colorscheme gruvbox
 
 lua << EOF
-local border = {
-      {"🭽", "FloatBorder"},
-      {"▔", "FloatBorder"},
-      {"🭾", "FloatBorder"},
-      {"▕", "FloatBorder"},
-      {"🭿", "FloatBorder"},
-      {"▁", "FloatBorder"},
-      {"🭼", "FloatBorder"},
-      {"▏", "FloatBorder"},
-}
-
--- LSP settings (for overriding per client)
-local handlers =  {
-  ["textDocument/hover"] =  vim.lsp.with(vim.lsp.handlers.hover, {border = border}),
-  ["textDocument/signatureHelp"] =  vim.lsp.with(vim.lsp.handlers.signature_help, {border = border }),
-}
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 require'lspconfig'.tsserver.setup{
-handlers = handers,
 capabilities = capabilities,
 on_attach = function() 
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0}) 
@@ -73,9 +56,6 @@ vim.keymap.set("n", "<leader>dk", vim.diagnostic.goto_prev, {buffer=0})
 vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, {buffer=0}) 
 vim.keymap.set("n", "<leader>.", vim.lsp.buf.code_action, {buffer=0}) 
 end}
-
-vim.cmd [[autocmd! ColorScheme * highlight NormalFloat guibg=#1f2335]]
-vim.cmd [[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335]]
 
 vim.diagnostic.config({virtual_text = true, signs = true, underline = true, update_in_insert = true, severity_sort = false})
 
@@ -110,15 +90,6 @@ cmp.setup({
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
         { name = 'luasnip' }, -- For luasnip users.
-    }, {
-        { name = 'buffer' },
-    })
-})
-
--- Set configuration for specific filetype.
-cmp.setup.filetype('gitcommit', {
-    sources = cmp.config.sources({
-        { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
     }, {
         { name = 'buffer' },
     })
