@@ -56,6 +56,9 @@ vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, {buffer=0})
 vim.keymap.set("n", "<leader>.", vim.lsp.buf.code_action, {buffer=0}) 
 end}
 
+vim.cmd [[autocmd! ColorScheme * highlight NormalFloat guibg=#1f2335]]
+vim.cmd [[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335]]
+
 vim.diagnostic.config({virtual_text = true, signs = true, underline = true, update_in_insert = true, severity_sort = false})
 
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
