@@ -97,6 +97,20 @@ sources = cmp.config.sources({
 })
 EOF
 
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:DevIconsEnableFoldersOpenClose = 1
+if exists("g:loaded_webdevicons")
+    call webdevicons#refresh()
+endif
+augroup devicons
+    autocmd!
+    autocmd FileType nerdtree setlocal nolist
+    autocmd FileType nerdtree syntax match hideBracketsInNerdTree "\]" contained conceal containedin=ALL
+    autocmd FileType nerdtree syntax match hideBracketsInNerdTree "\[" contained conceal containedin=ALL
+    autocmd FileType nerdtree setlocal conceallevel=3
+    autocmd FileType nerdtree setlocal concealcursor=nvic
+augroup END
+
 function! DeviconsColors(config)
     let colors = keys(a:config)
     augroup devicons_colors
