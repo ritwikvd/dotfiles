@@ -42,7 +42,7 @@ vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, {buffer=0})
 vim.keymap.set("n", "<leader>td", "<cmd>Telescope diagnostics<cr>", {buffer=0}) 
 vim.keymap.set("n", "<leader>dj", vim.diagnostic.goto_next, {buffer=0}) 
 vim.keymap.set("n", "<leader>dk", vim.diagnostic.goto_prev, {buffer=0}) 
-vim.keymap.set("n", "<leader>r", vim.diagnostic.rename, {buffer=0}) 
+vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, {buffer=0}) 
 end}
 EOF
 
