@@ -62,40 +62,78 @@ vim.diagnostic.config({virtual_text = true, signs = true, underline = true, upda
 
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-end
+    local hl = "DiagnosticSign" .. type
+    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+    end
 
-vim.opt.completeopt = {"menu", "menuone", "noselect"}
+    vim.opt.completeopt = {"menu", "menuone", "noselect"}
 
--- Setup nvim-cmp.
-local cmp = require'cmp'
+    -- Setup nvim-cmp.
+    local cmp = require'cmp'
 
-cmp.setup({
+    cmp.setup({
     snippet = {
         expand = function(args)
-            require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+        require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
         end,
-    },
+        },
     window = {
         completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered(),
-    },
+        },
     mapping = cmp.mapping.preset.insert({
-        ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-f>'] = cmp.mapping.scroll_docs(4),
-        ['<C-c>'] = cmp.mapping.complete(),
-        ['<C-e>'] = cmp.mapping.abort(),
-        ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-c>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.abort(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
-    sources = cmp.config.sources({
-        { name = 'nvim_lsp' },
-        { name = 'luasnip' }, -- For luasnip users.
-    }, {
-        { name = 'buffer' },
-    })
+sources = cmp.config.sources({
+{ name = 'nvim_lsp' },
+{ name = 'luasnip' }, -- For luasnip users.
+}, {
+{ name = 'buffer' },
+})
 })
 EOF
+
+function! DeviconsColors(config)
+    let colors = keys(a:config)
+    augroup devicons_colors
+        autocmd!
+        for color in colors
+            if color == 'normal'
+                exec 'autocmd FileType nerdtree,startify if &background == ''dark'' | '.
+                            \ 'highlight devicons_'.color.' guifg='.g:sol.gui.base01.' ctermfg='.g:sol.cterm.base01.' | '.
+                            \ 'else | '.
+                            \ 'highlight devicons_'.color.' guifg='.g:sol.gui.base1.' ctermfg='.g:sol.cterm.base1.' | '.
+                            \ 'endif'
+            elseif color == 'emphasize'
+                exec 'autocmd FileType nerdtree,startify if &background == ''dark'' | '.
+                            \ 'highlight devicons_'.color.' guifg='.g:sol.gui.base1.' ctermfg='.g:sol.cterm.base1.' | '.
+                            \ 'else | '.
+                            \ 'highlight devicons_'.color.' guifg='.g:sol.gui.base01.' ctermfg='.g:sol.cterm.base01.' | '.
+                            \ 'endif'
+            else
+                exec 'autocmd FileType nerdtree,startify highlight devicons_'.color.' guifg='.g:sol.gui[color].' ctermfg='.g:sol.cterm[color]
+            endif
+            exec 'autocmd FileType nerdtree,startify syntax match devicons_'.color.' /\v'.join(a:config[color], '|').'/ containedin=ALL'
+        endfor
+    augroup END
+endfunction
+let g:devicons_colors = {
+            \'normal': ['', '', '', '', ''],
+            \'emphasize': ['', '', '', '', '', '', '', '', '', '', ''],
+            \'yellow': ['', '', ''],
+            \'orange': ['', '', '', 'λ', '', ''],
+            \'red': ['', '', '', '', '', '', '', '', ''],
+            \'magenta': [''],
+            \'violet': ['', '', '', ''],
+            \'blue': ['', '', '', '', '', '', '', '', '', '', '', '', ''],
+            \'cyan': ['', '', '', ''],
+            \'green': ['', '', '', '']
+            \}
+call DeviconsColors(g:devicons_colors)
 
 "Autocmd
 augroup bin_dotfiles_sync
