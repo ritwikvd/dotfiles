@@ -72,7 +72,7 @@ augroup nerdtree
 augroup end
 
 "Remaps
-let mapleader = " "
+let mapleader = <M>
 nnoremap <leader><CR> :so %<CR>
 nnoremap <leader>p :Telescope find_files<CR>
 nnoremap <leader>j :cnext<CR>
