@@ -33,7 +33,8 @@ Plug 'neovim/nvim-lspconfig'
 call plug#end()
 
 lua << EOF
-require'lspconfig'.tsserver.setup{}
+require'lspconfig'.tsserver.setup{
+on_attach = function vim.keymap.set("n", "K", vim.lsp.buf.hover) end}
 EOF
 
 colorscheme gruvbox
