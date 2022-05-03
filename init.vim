@@ -34,10 +34,15 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
+Plug 'L3MON4D3/LuaSnip'
+Plug 'saadparwaiz1/cmp_luasnip'
 call plug#end()
 
+
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 lua << EOF
 require'lspconfig'.tsserver.setup{
+capabilities = capabilities,
 on_attach = function() 
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0}) 
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, {buffer=0}) 
@@ -50,45 +55,85 @@ vim.keymap.set("n", "<leader>dk", vim.diagnostic.goto_prev, {buffer=0})
 vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, {buffer=0}) 
 vim.keymap.set("n", "<leader>.", vim.lsp.buf.code_action, {buffer=0}) 
 end}
-EOF
 
-colorscheme gruvbox
+vim.opt.completeopt = {"menu", "menuone", "noselect"}
 
-"Autocmd
-augroup bin_dotfiles_sync
-    au!
-    au BufWritePost ~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc,~/.config/nvim/init.vim,~/.config/starship.toml,~/.tmux.conf silent! !up %:p
-    au BufWritePost /usr/local/bin/* silent! !up %:p
-augroup end
+-- Setup nvim-cmp.
+local cmp = require'cmp'
 
-augroup linting
-    au!
-    au BufWritePost ~/Desktop/personal/pushowl/dashboard/* silent! execute "!yarn --silent prettier --write --loglevel silent --config ~/.prettierrc %:p" | redraw! 
-augroup end
+cmp.setup({
+snippet = {
+    expand = function(args)
+    require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+    end,
+    },
+window = {
+    -- completion = cmp.config.window.bordered(),
+    -- documentation = cmp.config.window.bordered(),
+    },
+mapping = cmp.mapping.preset.insert({
+['<C-b>'] = cmp.mapping.scroll_docs(-4),
+['<C-f>'] = cmp.mapping.scroll_docs(4),
+['<C-Space>'] = cmp.mapping.complete(),
+['<C-e>'] = cmp.mapping.abort(),
+['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+}),
+    sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' }, -- For luasnip users.
+    }, {
+    { name = 'buffer' },
+    })
+})
 
-augroup nerdtree
-    au!
-    au FileType nerdtree setlocal rnu
-augroup end
+  -- Set configuration for specific filetype.
+  cmp.setup.filetype('gitcommit', {
+      sources = cmp.config.sources({
+      { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
+      }, {
+      { name = 'buffer' },
+      })
+  })
 
-"Remaps
-let mapleader = " "
-nnoremap <leader><CR> :so %<CR>
-nnoremap <leader>p :Telescope find_files<CR>
-nnoremap <leader>j :cnext<CR>
-nnoremap <leader>k :cprev<CR>
-nnoremap <leader>o :copen<CR>
-nnoremap <leader>a <C-^>
-nnoremap <leader>c "+y
-nnoremap <leader>e :Vex<CR>
-nnoremap <leader>s :w<CR>
-nnoremap <leader>q :q!<CR>
-nnoremap <leader>f gg=G
-nnoremap <leader>h _
-nnoremap <leader>l $
-nnoremap <expr> <C-n> g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTreeOpen<CR>' : ':NERDTreeFind<CR>'
+ EOF
 
-vnoremap <leader>c "+y
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
+ colorscheme gruvbox
+
+ "Autocmd
+ augroup bin_dotfiles_sync
+     au!
+     au BufWritePost ~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc,~/.config/nvim/init.vim,~/.config/starship.toml,~/.tmux.conf silent! !up %:p
+     au BufWritePost /usr/local/bin/* silent! !up %:p
+ augroup end
+
+ augroup linting
+     au!
+     au BufWritePost ~/Desktop/personal/pushowl/dashboard/* silent! execute "!yarn --silent prettier --write --loglevel silent --config ~/.prettierrc %:p" | redraw! 
+ augroup end
+
+ augroup nerdtree
+     au!
+     au FileType nerdtree setlocal rnu
+ augroup end
+
+ "Remaps
+ let mapleader = " "
+ nnoremap <leader><CR> :so %<CR>
+ nnoremap <leader>p :Telescope find_files<CR>
+ nnoremap <leader>j :cnext<CR>
+ nnoremap <leader>k :cprev<CR>
+ nnoremap <leader>o :copen<CR>
+ nnoremap <leader>a <C-^>
+ nnoremap <leader>c "+y
+ nnoremap <leader>e :Vex<CR>
+ nnoremap <leader>s :w<CR>
+ nnoremap <leader>q :q!<CR>
+ nnoremap <leader>f gg=G
+ nnoremap <leader>h _
+ nnoremap <leader>l $
+ nnoremap <expr> <C-n> g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTreeOpen<CR>' : ':NERDTreeFind<CR>'
+
+ vnoremap <leader>c "+y
+ vnoremap J :m '>+1<CR>gv=gv
+ vnoremap K :m '<-2<CR>gv=gv
 
