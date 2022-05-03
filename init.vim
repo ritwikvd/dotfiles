@@ -96,7 +96,6 @@ cmp.setup({
 })
 EOF
 
-
 "Autocmd
 augroup bin_dotfiles_sync
     au!
