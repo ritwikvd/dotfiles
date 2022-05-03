@@ -38,6 +38,7 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 call plug#end()
 
+colorscheme gruvbox
 
 lua << EOF
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
@@ -107,7 +108,6 @@ cmp.setup.filetype('gitcommit', {
 })
 EOF
 
-colorscheme gruvbox
 
 "Autocmd
 augroup bin_dotfiles_sync
