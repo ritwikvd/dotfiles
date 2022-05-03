@@ -31,7 +31,9 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'neovim/nvim-lspconfig'
 call plug#end()
 
+lua << EOF
 require'lspconfig'.tsserver.setup{}
+EOF
 
 colorscheme gruvbox
 
