@@ -28,7 +28,10 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'preservim/nerdtree'
 Plug 'gruvbox-community/gruvbox'
+Plug 'neovim/nvim-lspconfig'
 call plug#end()
+
+require'lspconfig'.tsserver.setup{}
 
 colorscheme gruvbox
 
