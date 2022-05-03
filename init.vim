@@ -97,58 +97,6 @@ sources = cmp.config.sources({
 })
 EOF
 
-let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-let g:DevIconsEnableFoldersOpenClose = 1
-if exists("g:loaded_webdevicons")
-    call webdevicons#refresh()
-endif
-augroup devicons
-    autocmd!
-    autocmd FileType nerdtree setlocal nolist
-    autocmd FileType nerdtree syntax match hideBracketsInNerdTree "\]" contained conceal containedin=ALL
-    autocmd FileType nerdtree syntax match hideBracketsInNerdTree "\[" contained conceal containedin=ALL
-    autocmd FileType nerdtree setlocal conceallevel=3
-    autocmd FileType nerdtree setlocal concealcursor=nvic
-augroup END
-
-function! DeviconsColors(config)
-    let colors = keys(a:config)
-    augroup devicons_colors
-        autocmd!
-        for color in colors
-            if color == 'normal'
-                exec 'autocmd FileType nerdtree,startify if &background == ''dark'' | '.
-                            \ 'highlight devicons_'.color.' guifg='.g:sol.gui.base01.' ctermfg='.g:sol.cterm.base01.' | '.
-                            \ 'else | '.
-                            \ 'highlight devicons_'.color.' guifg='.g:sol.gui.base1.' ctermfg='.g:sol.cterm.base1.' | '.
-                            \ 'endif'
-            elseif color == 'emphasize'
-                exec 'autocmd FileType nerdtree,startify if &background == ''dark'' | '.
-                            \ 'highlight devicons_'.color.' guifg='.g:sol.gui.base1.' ctermfg='.g:sol.cterm.base1.' | '.
-                            \ 'else | '.
-                            \ 'highlight devicons_'.color.' guifg='.g:sol.gui.base01.' ctermfg='.g:sol.cterm.base01.' | '.
-                            \ 'endif'
-            else
-                exec 'autocmd FileType nerdtree,startify highlight devicons_'.color.' guifg='.g:sol.gui[color].' ctermfg='.g:sol.cterm[color]
-            endif
-            exec 'autocmd FileType nerdtree,startify syntax match devicons_'.color.' /\v'.join(a:config[color], '|').'/ containedin=ALL'
-        endfor
-    augroup END
-endfunction
-let g:devicons_colors = {
-            \'normal': ['', '', '', '', ''],
-            \'emphasize': ['', '', '', '', '', '', '', '', '', '', ''],
-            \'yellow': ['', '', ''],
-            \'orange': ['', '', '', 'λ', '', ''],
-            \'red': ['', '', '', '', '', '', '', '', ''],
-            \'magenta': [''],
-            \'violet': ['', '', '', ''],
-            \'blue': ['', '', '', '', '', '', '', '', '', '', '', '', ''],
-            \'cyan': ['', '', '', ''],
-            \'green': ['', '', '', '']
-            \}
-call DeviconsColors(g:devicons_colors)
-
 "Autocmd
 augroup bin_dotfiles_sync
     au!
