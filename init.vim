@@ -95,7 +95,7 @@ mapping = cmp.mapping.preset.insert({
       })
   })
 
- EOF
+EOF
 
  colorscheme gruvbox
 
