@@ -10,6 +10,7 @@ set smartindent
 set hls ic is
 set background=light
 set signcolumn=yes
+set numberwidth=5
 
 "Settings
 let g:netrw_bufsettings='noma nomod nonu nowrap ro nobl nu rnu'
