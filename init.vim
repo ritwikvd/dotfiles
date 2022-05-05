@@ -121,7 +121,7 @@ augroup nerdtree
     au FileType nerdtree setlocal rnu
 augroup end
 
-augroup nohls
+augroup nohighlight
     au!
     au CmdlineLeave * :nohls
 augroup end
