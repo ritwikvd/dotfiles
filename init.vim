@@ -97,8 +97,6 @@ sources = cmp.config.sources({
 { name = 'buffer' },
 })
 })
-
-"require'nvim-treesitter.configs'.setup()
 EOF
 
 "Autocmd
