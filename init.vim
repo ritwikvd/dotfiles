@@ -97,6 +97,8 @@ sources = cmp.config.sources({
 { name = 'buffer' },
 })
 })
+
+require('nvim-ts-autotag').setup({autotag = {enable = true}})
 EOF
 
 "Autocmd
