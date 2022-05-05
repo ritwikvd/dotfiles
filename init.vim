@@ -118,7 +118,7 @@ augroup end
 
 augroup nohls
     au!
-    au CmdlineLeave * :nohls
+    "au CmdlineLeave * :nohls
     au CmdlineLeave * :echo printf("yp from here")
 augroup end
 
