@@ -99,11 +99,11 @@ sources = cmp.config.sources({
 })
 EOF
 
-"Autocmd
-augroup bin_dotfiles_sync
-    au!
-    au BufWritePost ~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc,~/.config/nvim/init.vim,~/.config/starship.toml,~/.tmux.conf silent! !up %:p
-    au BufWritePost /usr/local/bin/* silent! !up %:p
+*"Autocmd
+*augroup bin_dotfiles_sync
+*    au!
+*    au BufWritePost ~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc,~/.config/nvim/init.vim,~/.config/starship.toml,~/.tmux.conf silent! !up %:p
+*    au BufWritePost /usr/local/bin/* silent! !up %:p
 augroup end
 
 augroup linting
@@ -119,6 +119,7 @@ augroup end
 augroup nohls
     au!
     au CmdlineLeave * :nohls
+    au CmdlineLeave * :echo printf("yp from here")
 augroup end
 
 "Remaps
