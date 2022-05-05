@@ -99,11 +99,6 @@ sources = cmp.config.sources({
 })
 
 require'nvim-treesitter.configs'.setup()
-" {
-"autotag = {
-"    enable = true,
-"    }
-"}
 EOF
 
 "Autocmd
