@@ -118,6 +118,11 @@ augroup nerdtree
     au FileType nerdtree setlocal rnu
 augroup end
 
+augroup nohls
+    au!
+    au CmdlineLeave * :nohls
+augroup end
+
 "Remaps
 let mapleader = " "
 nnoremap <leader><CR> :so %<CR>
@@ -138,4 +143,3 @@ nnoremap <expr> <C-n> g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':
 vnoremap <leader>c "+y
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-
