@@ -161,3 +161,9 @@ nnoremap <expr> <C-n> g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':
 vnoremap <leader>c "+y
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+
+inoremap <silent> <C-s> <cmd>lua require'luasnip'.jump(1)<Cr>
+inoremap <silent> <C-S> <cmd>lua require'luasnip'.jump(-1)<Cr>
+
+snoremap <silent> <C-s> <cmd>lua require('luasnip').jump(1)<Cr>
+snoremap <silent> <C-S> <cmd>lua require('luasnip').jump(-1)<Cr>
