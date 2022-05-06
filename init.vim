@@ -133,7 +133,7 @@ augroup bin_dotfiles_sync
     au BufWritePost /usr/local/bin/* silent! !up %:p
 augroup end
 
-augroup linting
+augroup prettier
     au!
     au BufWritePost ~/Desktop/personal/pushowl/dashboard/* silent! execute "!yarn --silent prettier --write --loglevel silent --config ~/.prettierrc %:p" | redraw! 
 augroup end
