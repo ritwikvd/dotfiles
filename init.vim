@@ -29,8 +29,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'preservim/nerdtree'
 Plug 'gruvbox-community/gruvbox'
-"Plug 'ryanoasis/vim-devicons'
-Plug 'kyazdani42/nvim-web-devicons'
+Plug 'ryanoasis/vim-devicons'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -42,19 +41,11 @@ Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'rafamadriz/friendly-snippets'
-Plug 'folke/lsp-colors.nvim'
-Plug 'folke/trouble.nvim'
 call plug#end()
 
 colorscheme gruvbox
 
 lua << EOF
-require'nvim-web-devicons'.setup {
- default = true;
-}
-
-require("trouble").setup {}
-
 local ls = require("luasnip")
 ls.filetype_extend("javascript", {"html"})
 ls.filetype_extend("typescript", {"html","javascript"})
