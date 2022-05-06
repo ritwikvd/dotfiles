@@ -42,7 +42,7 @@ Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'rafamadriz/friendly-snippets'
-Plug 'folke/lsp-colors.nvim''
+Plug 'folke/lsp-colors.nvim'
 call plug#end()
 
 colorscheme gruvbox
