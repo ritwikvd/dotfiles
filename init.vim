@@ -163,6 +163,7 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 inoremap <silent> <C-k> <cmd>lua require'luasnip'.jump(1)<Cr>
+nnoremap <silent> <C-k> <cmd>lua require'luasnip'.jump(1)<Cr>
 inoremap <silent> <C-K> <cmd>lua require'luasnip'.jump(-1)<Cr>
 
 snoremap <silent> <C-k> <cmd>lua require('luasnip').jump(1)<Cr>
