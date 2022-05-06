@@ -43,6 +43,7 @@ Plug 'mattn/emmet-vim'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'folke/lsp-colors.nvim'
+Plug 'folke/trouble.nvim'
 call plug#end()
 
 colorscheme gruvbox
@@ -51,6 +52,8 @@ lua << EOF
 require'nvim-web-devicons'.setup {
  default = true;
 }
+
+require("trouble").setup {}
 
 local ls = require("luasnip")
 ls.filetype_extend("javascript", {"html"})
