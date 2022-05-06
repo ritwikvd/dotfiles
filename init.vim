@@ -40,11 +40,13 @@ Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
 Plug 'windwp/nvim-ts-autotag'
+Plug 'rafamadriz/friendly-snippets'
 call plug#end()
 
 colorscheme gruvbox
 
 lua << EOF
+require("luasnip.loaders.from_vscode").lazy_load()
 
 require('nvim-ts-autotag').setup()
 
