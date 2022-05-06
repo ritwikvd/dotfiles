@@ -64,6 +64,8 @@ require'nvim-web-devicons'.setup {
  default = true;
 }
 
+require'nvim-web-devicons'.get_icons()
+
 local ls = require("luasnip")
 ls.filetype_extend("javascript", {"html"})
 ls.filetype_extend("typescript", {"html","javascript"})
