@@ -52,11 +52,12 @@ ls.filetype_extend("typescript", {"html","javascript"})
 ls.filetype_extend("javascriptreact", {"html","javascript"})
 ls.filetype_extend("typescriptreact", {"html","javascript"})
 
-require("luasnip.loaders.from_vscode").load()
 ls.config.set_config{
 history = true,
 updateevents = "TextChanged,TextChangedI",
 }
+
+require("luasnip.loaders.from_vscode").load()
 
 require('nvim-ts-autotag').setup()
 
