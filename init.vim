@@ -157,15 +157,13 @@ nnoremap <leader>f gg=G
 nnoremap <leader>h _
 nnoremap <leader>l $
 nnoremap <expr> <C-n> g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTreeOpen<CR>' : ':NERDTreeFind<CR>'
-inoremap <expr> <C-n> g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTreeOpen<CR>' : '<cmd>NERDTreeFind<CR>'
 
 vnoremap <leader>c "+y
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 inoremap <silent> <C-k> <cmd>lua require'luasnip'.jump(1)<Cr>
-nnoremap <silent> <C-k> <cmd>lua require'luasnip'.jump(1)<Cr>
 inoremap <silent> <C-K> <cmd>lua require'luasnip'.jump(-1)<Cr>
 
-snoremap <silent> <C-k> <cmd>lua require('luasnip').jump(1)<Cr>
-snoremap <silent> <C-K> <cmd>lua require('luasnip').jump(-1)<Cr>
+snoremap <silent> <C-k> <cmd>lua require'luasnip'.jump(1)<Cr>
+snoremap <silent> <C-K> <cmd>lua require'luasnip'.jump(-1)<Cr>
