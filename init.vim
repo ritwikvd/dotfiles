@@ -48,6 +48,11 @@ colorscheme gruvbox
 lua << EOF
 require("luasnip.loaders.from_vscode").lazy_load()
 
+require("luasnip").config.set_config{
+history = true,
+updateevents = "TextChanged,TextChangedI",
+}
+
 require('nvim-ts-autotag').setup()
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
