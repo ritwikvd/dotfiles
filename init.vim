@@ -42,19 +42,11 @@ Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'rafamadriz/friendly-snippets'
-Plug 'folke/lsp-colors.nvim'
 call plug#end()
 
 colorscheme gruvbox
 
 lua << EOF
-require("lsp-colors").setup({
-  Error = "#db4b4b",
-  Warning = "#e0af68",
-  Information = "#0db9d7",
-  Hint = "#10B981"
-})
-
 require'nvim-web-devicons'.setup {
  default = true;
 }
