@@ -65,7 +65,7 @@ require'lspconfig'.tsserver.setup{
         vim.keymap.set("n", "<leader>.", vim.lsp.buf.code_action, {buffer=0}) 
     end}
 
-    vim.diagnostic.config({virtual_text = true, signs = true, underline = true, update_in_insert = false, severity_sort = false})
+    vim.diagnostic.config({virtual_text = true, signs = true, underline = true, update_in_insert = true, severity_sort = false})
 
     local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
     for type, icon in pairs(signs) do
