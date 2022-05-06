@@ -46,6 +46,13 @@ colorscheme gruvbox
 
 lua << EOF
 
+require('nvim-ts-autotag').setup()
+require'nvim-treesitter.configs'.setup{
+  autotag = {
+    enable = true,
+  }
+}
+
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 require'lspconfig'.tsserver.setup{
@@ -100,14 +107,6 @@ require'lspconfig'.tsserver.setup{
             { name = 'buffer' },
         })
     })
-
-require('nvim-ts-autotag').setup()
-require'nvim-treesitter.configs'.setup {
-  autotag = {
-    enable = true,
-  }
-}
-
 EOF
 
 "Autocmd
