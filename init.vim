@@ -39,19 +39,14 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
-"Plug 'windwp/nvim-ts-autotag'
+Plug 'windwp/nvim-ts-autotag'
 call plug#end()
 
 colorscheme gruvbox
 
 lua << EOF
 
---require('nvim-ts-autotag').setup()
-require'nvim-treesitter.configs'.setup{
-  autotag = {
-    enable = true,
-  }
-}
+require('nvim-ts-autotag').setup()
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
