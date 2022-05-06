@@ -47,6 +47,10 @@ call plug#end()
 colorscheme gruvbox
 
 lua << EOF
+require'nvim-web-devicons'.setup {
+ default = true;
+}
+
 local ls = require("luasnip")
 ls.filetype_extend("javascript", {"html"})
 ls.filetype_extend("typescript", {"html","javascript"})
