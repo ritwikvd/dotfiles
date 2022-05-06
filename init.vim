@@ -122,6 +122,11 @@ augroup nerdtree
     au FileType nerdtree setlocal rnu
 augroup end
 
+augroup eslint
+    au!
+    au BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll
+augroup end
+
 "Remaps
 let mapleader = " "
 nnoremap <leader><CR> :so %<CR>
