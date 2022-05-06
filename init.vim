@@ -46,9 +46,10 @@ call plug#end()
 colorscheme gruvbox
 
 lua << EOF
-require("luasnip").filetype_extend("javascript", {"html","typescript"})
-require("luasnip").filetype_extend("javascriptreact", {"html"})
-require("luasnip").filetype_extend("typescriptreact", {"html"})
+require("luasnip").filetype_extend("javascript", {"html"})
+require("luasnip").filetype_extend("typescript", {"javascript"})
+require("luasnip").filetype_extend("javascriptreact", {"html","javascript"})
+require("luasnip").filetype_extend("typescriptreact", {"html","javascript"})
 
 require("luasnip.loaders.from_vscode").load()
 require("luasnip").config.set_config{
