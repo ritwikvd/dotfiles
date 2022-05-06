@@ -46,7 +46,11 @@ call plug#end()
 colorscheme gruvbox
 
 lua << EOF
-require("luasnip.loaders.from_vscode").load({ include = {"javascript"} })
+require("luasnip").filetype_extend("javascript", {"html"})
+require("luasnip").filetype_extend("javascriptreact", {"html"})
+require("luasnip").filetype_extend("typescriptreact", {"html"})
+
+require("luasnip.loaders.from_vscode").load()
 require("luasnip").config.set_config{
 history = true,
 updateevents = "TextChanged,TextChangedI",
