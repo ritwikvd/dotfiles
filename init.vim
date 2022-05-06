@@ -7,7 +7,7 @@ set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent
-set ic is 
+set ic is nohls
 set background=light
 set signcolumn=yes
 
@@ -107,7 +107,7 @@ EOF
 "Autocmd
 augroup bin_dotfiles_sync
     au!
-    "au BufWritePost ~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc,~/.config/nvim/init.vim,~/.config/starship.toml,~/.tmux.conf silent! !up %:p
+    au BufWritePost ~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc,~/.config/nvim/init.vim,~/.config/starship.toml,~/.tmux.conf silent! !up %:p
     au BufWritePost /usr/local/bin/* silent! !up %:p
 augroup end
 
@@ -119,12 +119,6 @@ augroup end
 augroup nerdtree
     au!
     au FileType nerdtree setlocal rnu
-augroup end
-
-augroup nohighlight
-    au!
-    au CmdlineLeave * :nohls
-    au CmdlineLeave * :echo printf("exiting cmd line")
 augroup end
 
 "Remaps
