@@ -39,7 +39,7 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
-Plug 'windwp/nvim-ts-autotag'
+"Plug 'windwp/nvim-ts-autotag'
 call plug#end()
 
 colorscheme gruvbox
