@@ -10,9 +10,9 @@ set smartindent
 set ic is nohls
 set background=light
 set signcolumn=yes
-set termguicolors
-set t_8f=^[[38;2;%lu;%lu;%lum
-set t_8b=^[[48;2;%lu;%lu;%lum
+if !$TERM_PROGRAM =~ "Apple_Terminal"
+    set termguicolors
+endif
 
 "Settings
 let g:netrw_bufsettings='noma nomod nonu nowrap ro nobl nu rnu'
