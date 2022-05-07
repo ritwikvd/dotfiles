@@ -42,10 +42,9 @@ Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
 Plug 'rafamadriz/friendly-snippets'
-Plug 'EdenEast/nightfox.nvim'
 call plug#end()
 
-colorscheme dawnfox
+colorscheme gruvbox
 
 lua << EOF
 require'nvim-web-devicons'.setup {
