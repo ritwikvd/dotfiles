@@ -65,7 +65,7 @@ M.config = function()
     end
 end
 
-require'rafamadriz/statusline'.config = M.config()
+require'statusline'.config = M.config()
 
 require'nvim-web-devicons'.setup {
  default = true;
