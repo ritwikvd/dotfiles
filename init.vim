@@ -41,7 +41,6 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
-Plug 'windwp/nvim-ts-autotag'
 Plug 'rafamadriz/friendly-snippets'
 call plug#end()
 
@@ -64,8 +63,6 @@ updateevents = "TextChanged,TextChangedI",
 }
 
 require("luasnip.loaders.from_vscode").load()
-
-require('nvim-ts-autotag').setup()
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
