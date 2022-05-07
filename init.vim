@@ -42,11 +42,31 @@ Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
 Plug 'rafamadriz/friendly-snippets'
+Plug 'rafamadriz/statusline'
 call plug#end()
 
 colorscheme gruvbox
 
 lua << EOF
+local M = {}
+
+M.config = function()
+    local status = { "classic", "arrow", "slant" }
+
+    if vim.g.code_statusline == nil or vim.g.code_statusline:gsub("%s+", "") == "" then
+        require("feline.styles." .. status[1])
+    else
+        for _, v in pairs(status) do
+            if vim.g.code_statusline:gsub("%s+", "") == v then
+                require("feline.styles." .. v)
+                return
+            end
+        end
+    end
+end
+
+require'rafamadriz/statusline'.config = M.config()
+
 require'nvim-web-devicons'.setup {
  default = true;
 }
