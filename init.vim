@@ -10,7 +10,7 @@ set smartindent
 set ic is nohls
 set background=light
 set signcolumn=yes
-set termguicolors
+"set termguicolors
 
 "Settings
 let g:netrw_bufsettings='noma nomod nonu nowrap ro nobl nu rnu'
