@@ -45,7 +45,7 @@ Plug 'rafamadriz/friendly-snippets'
 Plug 'EdenEast/nightfox.nvim'
 call plug#end()
 
-colorscheme nightfox
+colorscheme terafox
 
 lua << EOF
 require'nvim-web-devicons'.setup {
