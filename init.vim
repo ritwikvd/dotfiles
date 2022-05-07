@@ -42,11 +42,14 @@ Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
 Plug 'rafamadriz/friendly-snippets'
+Plug 'feline-nvim/feline.nvim'
 call plug#end()
 
 colorscheme gruvbox
 
 lua << EOF
+require('feline').setup()
+
 require'nvim-web-devicons'.setup {
  default = true;
 }
