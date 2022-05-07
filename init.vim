@@ -42,14 +42,12 @@ Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
 Plug 'rafamadriz/friendly-snippets'
-Plug 'feline-nvim/feline.nvim'
+Plug 'EdenEast/nightfox.nvim'
 call plug#end()
 
-colorscheme gruvbox
+colorscheme dayfox
 
 lua << EOF
-require('feline').setup()
-
 require'nvim-web-devicons'.setup {
  default = true;
 }
