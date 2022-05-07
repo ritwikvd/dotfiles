@@ -43,11 +43,13 @@ Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'rafamadriz/statusline'
+Plug 'feline-nvim/feline.nvim'
 call plug#end()
 
 colorscheme gruvbox
 
 lua << EOF
+require('feline').setup()
 local M = {}
 
 M.config = function()
