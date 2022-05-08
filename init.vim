@@ -84,7 +84,7 @@ require'lspconfig'.tsserver.setup{
         vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0}) 
         vim.keymap.set("n", "gd", vim.lsp.buf.definition, {buffer=0}) 
         vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {buffer=0}) 
-        vim.keymap.set("n", "gr", vim.lsp.buf.references, {buffer=0}) 
+        vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<cr>", {buffer=0}) 
         vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, {buffer=0}) 
         vim.keymap.set("n", "<leader>td", "<cmd>Telescope diagnostics<cr>", {buffer=0}) 
         vim.keymap.set("n", "<leader>dk", vim.diagnostic.goto_next, {buffer=0}) 
@@ -170,6 +170,7 @@ nnoremap <leader>q :q!<CR>
 nnoremap <leader>f gg=G
 nnoremap <leader>h _
 nnoremap <leader>l $
+nnoremap <leader>b <cmd>Telescope buffers<cr>
 nnoremap <expr> <C-n> g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTreeOpen<CR>' : ':NERDTreeFind<CR>'
 
 vnoremap <leader>c "+y
