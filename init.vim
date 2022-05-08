@@ -164,6 +164,7 @@ nnoremap <leader>h _
 nnoremap <leader>l $
 nnoremap <leader>b <cmd>Telescope buffers<cr>
 nnoremap <leader><S-F> <cmd>Telescope live_grep<cr>
+nnoremap <leader><S-F>f <cmd>Telescope live_grep({grep_open_files=true})<cr>
 nnoremap <expr> <C-n> g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTreeOpen<CR>' : ':NERDTreeFind<CR>'
 
 vnoremap <leader>c "+y
