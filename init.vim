@@ -58,7 +58,7 @@ extensions = {
       require("telescope.themes").get_dropdown {}
     }
 }
-
+}
 require("telescope").load_extension("ui-select")
 
 local ls = require("luasnip")
