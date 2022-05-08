@@ -199,6 +199,7 @@ nnoremap <leader>s :w<CR>
 nnoremap <leader><S-S> :wa<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader><S-Q> :qa!<CR>
+nnoremap <leader>x :xa<CR>
 nnoremap <leader>f gg=G
 nnoremap <leader>h _
 nnoremap <leader>l $
