@@ -42,6 +42,7 @@ Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
 Plug 'rafamadriz/friendly-snippets'
+Plug 'nvim-telescope/telescope-ui-select.nvim'
 call plug#end()
 
 colorscheme gruvbox
@@ -50,6 +51,15 @@ lua << EOF
 require'nvim-web-devicons'.setup {
  default = true;
 }
+
+require'telescope'.setup{
+extensions = {
+["ui-select"] = {
+      require("telescope.themes").get_dropdown {}
+    }
+}
+
+require("telescope").load_extension("ui-select")
 
 local ls = require("luasnip")
 ls.filetype_extend("javascript", {"html"})
