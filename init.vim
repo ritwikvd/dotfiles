@@ -161,7 +161,7 @@ nnoremap <leader><CR> :so %<CR>
 nnoremap <leader>p :Telescope find_files<CR>
 nnoremap <leader>j :cnext<CR>
 nnoremap <leader>k :cprev<CR>
-nnoremap <leader>o :copen<CR>
+nnoremap <leader>o <cmd>Telescope quickfix<cr>
 nnoremap <leader>a <C-^>
 nnoremap <leader>c "+y
 nnoremap <leader>e :Vex<CR>
