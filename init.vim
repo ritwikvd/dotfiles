@@ -86,6 +86,44 @@ require'lspconfig'.tsserver.setup{
         vim.keymap.set("n", "<leader>.", vim.lsp.buf.code_action, {buffer=0}) 
     end}
 
+require'lspconfig'.sumneko_lua.setup{
+settings = {
+    Lua = {
+        runtime = {
+            -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+            version = 'LuaJIT',
+            -- Setup your lua path
+            path = runtime_path,
+            },
+        diagnostics = {
+            -- Get the language server to recognize the `vim` global
+            globals = {'vim'},
+            },
+        workspace = {
+            -- Make the server aware of Neovim runtime files
+            library = vim.api.nvim_get_runtime_file("", true),
+            },
+        -- Do not send telemetry data containing a randomized but unique identifier
+        telemetry = {
+            enable = false,
+            },
+        },
+    },
+    capabilities = capabilities,
+    on_attach = function() 
+        vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0}) 
+        vim.keymap.set("n", "gd", vim.lsp.buf.definition, {buffer=0}) 
+        vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {buffer=0}) 
+        vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<cr>", {buffer=0}) 
+        vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, {buffer=0}) 
+        vim.keymap.set("n", "<leader>td", "<cmd>Telescope diagnostics<cr>", {buffer=0}) 
+        vim.keymap.set("n", "<leader>dk", vim.diagnostic.goto_next, {buffer=0}) 
+        vim.keymap.set("n", "<leader>dj", vim.diagnostic.goto_prev, {buffer=0}) 
+        vim.keymap.set("n", "<leader>dw", vim.diagnostic.open_float, {buffer=0}) 
+        vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, {buffer=0}) 
+        vim.keymap.set("n", "<leader>.", vim.lsp.buf.code_action, {buffer=0}) 
+    end}
+
     vim.diagnostic.config({virtual_text = true, signs = true, underline = true, update_in_insert = true, severity_sort = false})
 
     local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
