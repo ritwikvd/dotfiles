@@ -43,23 +43,18 @@ Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'nvim-telescope/telescope-ui-select.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 call plug#end()
 
 colorscheme gruvbox
 
 lua << EOF
-require'nvim-web-devicons'.setup {
- default = true;
-}
+require'nvim-web-devicons'.setup { default = true; }
 
-require'telescope'.setup{
-extensions = {
-["ui-select"] = {
-      require("telescope.themes").get_dropdown {}
-    }
-}
-}
+require'telescope'.setup{ extensions = { ["ui-select"] = { require("telescope.themes").get_dropdown {} } } }
 require("telescope").load_extension("ui-select")
+
+require('telescope').load_extension('fzf')
 
 local ls = require("luasnip")
 ls.filetype_extend("javascript", {"html"})
@@ -67,10 +62,7 @@ ls.filetype_extend("typescript", {"html","javascript"})
 ls.filetype_extend("javascriptreact", {"html","javascript"})
 ls.filetype_extend("typescriptreact", {"html","javascript"})
 
-ls.config.set_config{
-history = true,
-updateevents = "TextChanged,TextChangedI",
-}
+ls.config.set_config{ history = true, updateevents = "TextChanged,TextChangedI" }
 
 require("luasnip.loaders.from_vscode").load()
 
