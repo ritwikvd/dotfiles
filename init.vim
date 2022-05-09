@@ -172,7 +172,7 @@ augroup end
 
 augroup prettier
     au!
-    au BufWritePost ~/Desktop/personal/pushowl/dashboard/* silent! execute "!yarn --silent prettier --write --loglevel silent --config ~/.prettierrc %:p" | redraw! 
+    au BufWritePost ~/Desktop/personal/pushowl/**/* silent! execute "!yarn --silent prettier --write --loglevel silent --config ~/.prettierrc %:p" | redraw! 
 augroup end
 
 augroup nerdtree
