@@ -52,7 +52,7 @@ colorscheme gruvbox
 lua << EOF
 require'nvim-web-devicons'.setup { default = true; }
 
-require'telescope'.setup{ extensions = {pickers = {find_files = {hidden = true}}, ["ui-select"] = { require("telescope.themes").get_dropdown {} } } }
+require'telescope'.setup{ pickers = {find_files = {hidden = true}}, extensions = { ["ui-select"] = { require("telescope.themes").get_dropdown {} } } }
 require("telescope").load_extension("ui-select")
 
 require('telescope').load_extension('fzf')
