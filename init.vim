@@ -52,7 +52,7 @@ colorscheme gruvbox
 lua << EOF
 require'nvim-web-devicons'.setup { default = true; }
 
-require'telescope'.setup{ pickers = {find_files = {hidden = true}}, extensions = { ["ui-select"] = { require("telescope.themes").get_dropdown {} } } }
+require'telescope'.setup{ extensions = { ["ui-select"] = { require("telescope.themes").get_dropdown {} } } }
 require("telescope").load_extension("ui-select")
 
 require('telescope').load_extension('fzf')
@@ -189,7 +189,7 @@ augroup end
 "Remaps
 let mapleader = " "
 nnoremap <leader><CR> :so %<CR>
-nnoremap <leader>p :Telescope find_files<CR>
+nnoremap <leader>p :Telescope git_files<CR>
 nnoremap <leader>j :cnext<CR>
 nnoremap <leader>k :cprev<CR>
 nnoremap <leader>o <cmd>Telescope quickfix<cr>
