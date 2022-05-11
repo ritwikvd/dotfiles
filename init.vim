@@ -79,6 +79,20 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 
 require'lspconfig'.eslint.setup{}
 
+local mappings =function() 
+        vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0}) 
+        vim.keymap.set("n", "gd", vim.lsp.buf.definition, {buffer=0}) 
+        vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {buffer=0}) 
+        vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<cr>", {buffer=0}) 
+        vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, {buffer=0}) 
+        vim.keymap.set("n", "<leader>td", "<cmd>Telescope diagnostics<cr>", {buffer=0}) 
+        vim.keymap.set("n", "<leader>dk", vim.diagnostic.goto_next, {buffer=0}) 
+        vim.keymap.set("n", "<leader>dj", vim.diagnostic.goto_prev, {buffer=0}) 
+        vim.keymap.set("n", "<leader>dw", vim.diagnostic.open_float, {buffer=0}) 
+        vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, {buffer=0}) 
+        vim.keymap.set("n", "<leader>.", vim.lsp.buf.code_action, {buffer=0}) 
+    end
+
 require'lspconfig'.tsserver.setup{
     capabilities = capabilities,
     on_attach = function() 
