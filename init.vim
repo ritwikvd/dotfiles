@@ -22,7 +22,6 @@ let g:NERDCreateDefaultMappings = 0
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
-let g:NERDCustomDelimiters = { 'tsx': { 'left': '/**','right': '*/' } }
 let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1
 let g:NERDToggleCheckAllLines = 1
@@ -218,10 +217,10 @@ nnoremap <leader><S-F> <cmd>Telescope live_grep<cr>
 nnoremap <leader><S-O> <cmd>lua require'telescope.builtin'.live_grep({grep_open_files=true})<cr>
 nnoremap <expr> <C-n> g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTreeOpen<CR>' : ':NERDTreeFind<CR>'
 
-vnoremap <leader>c "+y
+xnoremap <leader>c "+y
 xnoremap <leader>/ :call nerdcommenter#Comment(1,'toggle')<cr>
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
+xnoremap J :m '>+1<CR>gv=gv
+xnoremap K :m '<-2<CR>gv=gv
 
 inoremap <silent> <C-k> <cmd>lua require'luasnip'.jump(1)<Cr>
 inoremap <silent> <C-j> <cmd>lua require'luasnip'.jump(-1)<Cr>
