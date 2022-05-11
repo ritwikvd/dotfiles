@@ -57,6 +57,7 @@ Plug 'preservim/nerdcommenter'
 call plug#end()
 
 colorscheme gruvbox
+hi CursorLineNr guifg=DarkMagenta
 
 lua << EOF
 require'nvim-web-devicons'.setup { default = true; }
