@@ -13,6 +13,9 @@ set signcolumn=yes
 set termguicolors
 set list lcs=tab:\|\ 
 set cursorline
+set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175
+
+
 
 "Settings
 let g:netrw_bufsettings='noma nomod nonu nowrap ro nobl nu rnu'
@@ -26,11 +29,6 @@ let g:NERDDefaultAlign = 'left'
 let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1
 let g:NERDToggleCheckAllLines = 1
-
-"1: blinking block  2: solid block  3: blinking underscore  4: solid underscore  5: blinking vertical bar 6: solid vertical bar
-let &t_SI.="\e[5 q" "SI = INSERT mode
-let &t_SR.="\e[3 q" "SR = REPLACE mode
-let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
 "Plugins
 call plug#begin('~/.vim/plugged')
