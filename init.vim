@@ -219,7 +219,7 @@ nnoremap <leader><S-O> <cmd>lua require'telescope.builtin'.live_grep({grep_open_
 nnoremap <expr> <C-n> g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTreeOpen<CR>' : ':NERDTreeFind<CR>'
 
 vnoremap <leader>c "+y
-vnoremap <leader>/ NERDCommenterToggle
+vnoremap <leader>/ <cmd>'<,'> call nerdcommenter#/Comment('x','toggle')
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
