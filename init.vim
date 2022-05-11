@@ -18,6 +18,14 @@ let g:netrw_bufsettings='noma nomod nonu nowrap ro nobl nu rnu'
 let g:gruvbox_contrast_light='hard'
 let g:NERDTreeShowLineNumbers=1
 let NERDTreeShowHidden=1
+let g:NERDCreateDefaultMappings = 0
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 1
+let g:NERDDefaultAlign = 'left'
+let g:NERDCustomDelimiters = { 'tsx': { 'left': '/**','right': '*/' } }
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
+let g:NERDToggleCheckAllLines = 1
 
 "1: blinking block  2: solid block  3: blinking underscore  4: solid underscore  5: blinking vertical bar 6: solid vertical bar
 let &t_SI.="\e[5 q" "SI = INSERT mode
@@ -45,6 +53,7 @@ Plug 'mattn/emmet-vim'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'nvim-telescope/telescope-ui-select.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'preservim/nerdcommenter'
 call plug#end()
 
 colorscheme gruvbox
@@ -210,7 +219,6 @@ nnoremap <leader><S-O> <cmd>lua require'telescope.builtin'.live_grep({grep_open_
 nnoremap <expr> <C-n> g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTreeOpen<CR>' : ':NERDTreeFind<CR>'
 
 vnoremap <leader>c "+y
-xnoremap <leader>/ <cmd>'<,'> s/^/\/\//<cr>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
