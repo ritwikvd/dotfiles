@@ -79,7 +79,7 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 
 require'lspconfig'.eslint.setup{}
 
-local mappings =function() 
+local mappings = function() 
         vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0}) 
         vim.keymap.set("n", "gd", vim.lsp.buf.definition, {buffer=0}) 
         vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {buffer=0}) 
