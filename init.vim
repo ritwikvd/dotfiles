@@ -12,6 +12,7 @@ set background=light
 set signcolumn=yes
 set termguicolors
 set list lcs=tab:\|\ 
+set cursorline
 
 "Settings
 let g:netrw_bufsettings='noma nomod nonu nowrap ro nobl nu rnu'
