@@ -50,6 +50,7 @@ Plug 'rafamadriz/friendly-snippets'
 Plug 'nvim-telescope/telescope-ui-select.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'preservim/nerdcommenter'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 call plug#end()
 
 colorscheme gruvbox
