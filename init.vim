@@ -59,7 +59,7 @@ hi CursorLineNr guifg=DarkMagenta
 lua << EOF
 require'nvim-web-devicons'.setup { default = true; }
 
-require'telescope'.setup{ extensions = { ["ui-select"] = { require("telescope.themes").get_dropdown {} } } }
+require'telescope'.setup{ defaults: {initial_mode = "normal"}, extensions = { ["ui-select"] = { require("telescope.themes").get_dropdown {} } } }
 require("telescope").load_extension("ui-select")
 
 require('telescope').load_extension('fzf')
@@ -201,7 +201,7 @@ nnoremap <leader>x :xa<CR>
 nnoremap <leader>f gg=G
 nnoremap <leader>h _
 nnoremap <leader>l $
-nnoremap <leader>b <cmd>Telescope buffers<cr><Esc>
+nnoremap <leader>b <cmd>Telescope buffers<cr>
 nnoremap <leader><S-F> <cmd>Telescope live_grep<cr>
 nnoremap <leader><S-O> <cmd>lua require'telescope.builtin'.live_grep({grep_open_files=true})<cr>
 nnoremap <expr> <C-n> g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTreeOpen<CR>' : ':NERDTreeFind<CR>'
