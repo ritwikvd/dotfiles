@@ -201,7 +201,7 @@ nnoremap <leader>x :xa<CR>
 nnoremap <leader>f gg=G
 nnoremap <leader>h _
 nnoremap <leader>l $
-nnoremap <leader>b <cmd>Telescope buffers<cr><esc>
+nnoremap <leader>b <cmd>Telescope buffers<cr><Esc>
 nnoremap <leader><S-F> <cmd>Telescope live_grep<cr>
 nnoremap <leader><S-O> <cmd>lua require'telescope.builtin'.live_grep({grep_open_files=true})<cr>
 nnoremap <expr> <C-n> g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTreeOpen<CR>' : ':NERDTreeFind<CR>'
