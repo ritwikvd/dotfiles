@@ -59,7 +59,7 @@ hi CursorLineNr guifg=DarkMagenta
 lua << EOF
 require'nvim-web-devicons'.setup { default = true; }
 
-require'telescope'.setup{ extensions = { ["ui-select"] = { require("telescope.themes").get_dropdown {} } }} 
+require'telescope'.setup{ extensions = { ["ui-select"] = {mode = "normal", require("telescope.themes").get_dropdown {} } }} 
 require("telescope").load_extension("ui-select")
 
 require('telescope').load_extension('fzf')
