@@ -78,21 +78,11 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 require'lspconfig'.cssls.setup{ filetypes: {"css","scss","typescript","javascript"}, settings: {
-  css = {
-    validate = true
-  },
-  less = {
-    validate = true
-  },
-  scss = {
-    validate = true
-  },
-  typescript= {
-    validate = true
-  },
-  javascript = {
-    validate = true
-  }
+  css = { validate = true },
+  less = { validate = true },
+  scss = { validate = true },
+  typescript= { validate = true },
+  javascript = { validate = true }
 }}
 require'lspconfig'.eslint.setup{}
 
