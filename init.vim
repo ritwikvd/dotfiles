@@ -75,7 +75,25 @@ ls.config.set_config{ history = true, updateevents = "TextChanged,TextChangedI" 
 require("luasnip.loaders.from_vscode").load()
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
+require'lspconfig'.cssls.setup{ filetypes: {"css","scss","typescript","javascript"}, settings: {
+  css = {
+    validate = true
+  },
+  less = {
+    validate = true
+  },
+  scss = {
+    validate = true
+  },
+  typescript= {
+    validate = true
+  },
+  javascript = {
+    validate = true
+  }
+}}
 require'lspconfig'.eslint.setup{}
 
 local mappings = function() 
