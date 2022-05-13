@@ -8,7 +8,7 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set ic is nohls
-set background=light
+set background=dark
 set signcolumn=yes
 set termguicolors
 set list lcs=tab:\|\ 
