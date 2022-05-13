@@ -218,7 +218,7 @@ inoremap <C-[> []<Esc>i
 inoremap <C-(> ()<Esc>i
 inoremap <C-'> ''<Esc>i
 inoremap <C-"> ""<Esc>i
-inoremap <C-`> ``<Esc>i
+inoremap <silent> <C-`> ``<Esc>i
 
 snoremap <silent> <C-k> <cmd>lua require'luasnip'.jump(1)<Cr>
 snoremap <silent> <C-j> <cmd>lua require'luasnip'.jump(-1)<Cr>
