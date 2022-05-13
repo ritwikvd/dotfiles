@@ -213,6 +213,7 @@ xnoremap K :m '<-2<CR>gv=gv
 
 inoremap <silent> <C-k> <cmd>lua require'luasnip'.jump(1)<Cr>
 inoremap <silent> <C-j> <cmd>lua require'luasnip'.jump(-1)<Cr>
+inoremap { {}<Esc>i
 
 snoremap <silent> <C-k> <cmd>lua require'luasnip'.jump(1)<Cr>
 snoremap <silent> <C-j> <cmd>lua require'luasnip'.jump(-1)<Cr>
