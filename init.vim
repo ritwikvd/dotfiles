@@ -211,8 +211,8 @@ xnoremap <leader>/ :call nerdcommenter#Comment(1,'toggle')<cr>
 xnoremap J :m '>+1<CR>gv=gv
 xnoremap K :m '<-2<CR>gv=gv
 
-inoremap <silent> <C-h> <cmd>lua require'luasnip'.jump(1)<Cr>
-inoremap <silent> <C-l> <cmd>lua require'luasnip'.jump(-1)<Cr>
+inoremap <silent> <C-l> <cmd>lua require'luasnip'.jump(1)<Cr>
+inoremap <silent> <C-h> <cmd>lua require'luasnip'.jump(-1)<Cr>
 inoremap <silent> <M-'> ''<Esc>i
 inoremap <silent> <M-"> ""<Esc>i
 inoremap <silent> <M-`> ``<Esc>i
