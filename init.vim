@@ -204,7 +204,7 @@ nnoremap <leader>x :xa<CR>
 nnoremap <leader>f gg=G
 nnoremap <leader>h _
 nnoremap <leader>l $
-nnoremap <leader>g gccVS{
+nnoremap <leader>g gbcVS{
 nnoremap <leader>b <cmd>lua require'telescope.builtin'.buffers({initial_mode = "normal"})<cr>
 nnoremap <leader><S-F> <cmd>Telescope live_grep<cr>
 nnoremap <leader><S-O> <cmd>lua require'telescope.builtin'.live_grep({grep_open_files=true})<cr>
