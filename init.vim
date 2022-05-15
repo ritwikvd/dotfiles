@@ -49,14 +49,16 @@ Plug 'mattn/emmet-vim'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'nvim-telescope/telescope-ui-select.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-Plug 'preservim/nerdcommenter'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'numToStr/Comment.nvim'
 call plug#end()
 
 colorscheme gruvbox
 hi CursorLineNr guifg=DarkMagenta
 
 lua << EOF
+require'Comment'.setup()
+
 require'nvim-web-devicons'.setup { default = true; }
 
 require'telescope'.setup{ extensions = { ["ui-select"] = { require("telescope.themes").get_dropdown {} } }} 
@@ -208,7 +210,6 @@ nnoremap <leader><S-O> <cmd>lua require'telescope.builtin'.live_grep({grep_open_
 nnoremap <expr> <C-n> g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTreeOpen<CR>' : ':NERDTreeFind<CR>'
 
 xnoremap <leader>c "+y
-xnoremap <leader>/ :call nerdcommenter#Comment(1,'toggle')<cr>
 xnoremap J :m '>+1<CR>gv=gv
 xnoremap K :m '<-2<CR>gv=gv
 
