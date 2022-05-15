@@ -59,9 +59,8 @@ hi CursorLineNr guifg=DarkMagenta
 
 lua << EOF
 require'nvim-treesitter.configs'.setup {
-  context_commentstring = {
-    enable = true
-  }
+  context_commentstring = { enable = true },
+  autotag = { enable = true }
 }
 
 require'Comment'.setup{
