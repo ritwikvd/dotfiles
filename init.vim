@@ -51,12 +51,19 @@ Plug 'nvim-telescope/telescope-ui-select.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'numToStr/Comment.nvim'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 call plug#end()
 
 colorscheme gruvbox
 hi CursorLineNr guifg=DarkMagenta
 
 lua << EOF
+require'nvim-treesitter.configs'.setup {
+  context_commentstring = {
+    enable = true
+  }
+}
+
 require'Comment'.setup{
 pre_hook = function(ctx)
         -- Only calculate commentstring for tsx filetypes
