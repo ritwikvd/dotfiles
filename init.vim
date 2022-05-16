@@ -130,28 +130,15 @@ require'lspconfig'.tsserver.setup{
 require'lspconfig'.sumneko_lua.setup{
 settings = {
     Lua = {
-        runtime = {
-            -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-            version = 'LuaJIT',
-            -- Setup your lua path
-            path = runtime_path,
-            },
-        diagnostics = {
-            -- Get the language server to recognize the `vim` global
-            globals = {'vim'},
-            },
-        workspace = {
-            -- Make the server aware of Neovim runtime files
-            library = vim.api.nvim_get_runtime_file("", true),
-            },
-        -- Do not send telemetry data containing a randomized but unique identifier
-        telemetry = {
-            enable = false,
-            },
+        runtime = { version = 'LuaJIT', path = runtime_path },
+        diagnostics = { globals = {'vim'} },
+        workspace = { library = vim.api.nvim_get_runtime_file("", true) },
+        telemetry = { enable = false },
         },
     },
     capabilities = capabilities,
-    on_attach = mappings}
+    on_attach = mappings
+}
 
     vim.diagnostic.config({virtual_text = true, signs = true, underline = true, update_in_insert = true, severity_sort = false})
 
@@ -163,19 +150,11 @@ settings = {
 
     vim.opt.completeopt = {"menu", "menuone", "noselect"}
 
-    -- Setup nvim-cmp.
     local cmp = require'cmp'
 
     cmp.setup({
-        snippet = {
-            expand = function(args)
-                require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-            end,
-        },
-        window = {
-            completion = cmp.config.window.bordered(),
-            documentation = cmp.config.window.bordered(),
-        },
+        snippet = { expand = function(args) require('luasnip').lsp_expand(args.body) end },
+        window = { completion = cmp.config.window.bordered(), documentation = cmp.config.window.bordered() },
         mapping = cmp.mapping.preset.insert({
             ['<C-b>'] = cmp.mapping.scroll_docs(-4),
             ['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -183,12 +162,7 @@ settings = {
             ['<C-e>'] = cmp.mapping.abort(),
             ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
         }),
-        sources = cmp.config.sources({
-            { name = 'nvim_lsp' },
-            { name = 'luasnip' }, -- For luasnip users.
-        }, {
-            { name = 'buffer' },
-        })
+        sources = cmp.config.sources({{ name = 'nvim_lsp' },{ name = 'luasnip' }},{{ name = 'buffer'}})
     })
 EOF
 
