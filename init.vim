@@ -90,7 +90,7 @@ pre_hook = function(ctx)
 
 require'nvim-web-devicons'.setup { default = true; }
 
-require'telescope'.setup{ extensions = { ["ui-select"] = { require("telescope.themes").get_dropdown {} } }} 
+require'telescope'.setup{ defaults = {mappings = {n = {["<leader>v"] = "select_vertical"}}}, extensions = { ["ui-select"] = { require("telescope.themes").get_dropdown {} } }} 
 require("telescope").load_extension("ui-select")
 
 require('telescope').load_extension('fzf')
