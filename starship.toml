@@ -25,8 +25,7 @@ show_always=true
 
 [directory]
 format="[$path]($style)"
-style_path="#e7c02b"
-show_always=true
+style="#e7c02b"
 
 [character]
 success_symbol = "[➜](#00bf00) "
