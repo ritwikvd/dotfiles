@@ -20,7 +20,7 @@ $jobs:: """
 
 [username]
 format="[$user]($style)"
-style_user="#f54290"
+style_user="bold #f54290"
 show_always=true
 
 [character]
