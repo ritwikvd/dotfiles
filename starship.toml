@@ -24,8 +24,8 @@ style_user="bold red"
 show_always=true
 
 [character]
-success_symbol = "[➜](bold green) "
-vicmd_symbol = "[➜](bold purple) "
+success_symbol = "[➜](#00bf00) "
+vicmd_symbol = "[➜](#0000ff) "
 error_symbol = "[✗](#ff0000) "
 
 [line_break]
