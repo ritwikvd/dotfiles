@@ -216,8 +216,8 @@ xnoremap <leader>c "+y
 xnoremap J :m '>+1<CR>gv=gv
 xnoremap K :m '<-2<CR>gv=gv
 
-inoremap <silent> <C-k> <cmd>lua require'luasnip'.jump(1)<Cr>
-inoremap <silent> <C-j> <cmd>lua require'luasnip'.jump(-1)<Cr>
+inoremap <silent> <C-l> <cmd>lua require'luasnip'.jump(1)<Cr>
+inoremap <silent> <C-h> <cmd>lua require'luasnip'.jump(-1)<Cr>
 inoremap <silent> <M-'> ''<Esc>i
 inoremap <silent> <M-"> ""<Esc>i
 inoremap <silent> <M-`> ``<Esc>i
@@ -225,5 +225,5 @@ inoremap <silent> <M-{> {}<Esc>i
 inoremap <silent> <M-[> []<Esc>i
 inoremap <silent> <M-(> ()<Esc>i
 
-snoremap <silent> <C-k> <cmd>lua require'luasnip'.jump(1)<Cr>
-snoremap <silent> <C-j> <cmd>lua require'luasnip'.jump(-1)<Cr>
+snoremap <silent> <C-l> <cmd>lua require'luasnip'.jump(1)<Cr>
+snoremap <silent> <C-h> <cmd>lua require'luasnip'.jump(-1)<Cr>
