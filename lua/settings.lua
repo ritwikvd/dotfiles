@@ -28,5 +28,3 @@ g.NERDDefaultAlign = "left"
 g.NERDCommentEmptyLines = 1
 g.NERDTrimTrailingWhitespace = 1
 g.NERDToggleCheckAllLines = 1
-g.nohlsearch = true
-g.nohls = true
