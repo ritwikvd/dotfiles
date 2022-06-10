@@ -1,33 +1,33 @@
 "Set Options
 "vim.opt
-set autoread
-set scrolloff=12
-set rnu
-set number
-set tabstop=4 softtabstop=4
-set shiftwidth=4
-set expandtab
-set smartindent
-set ic is nohls
-set background=light
-set signcolumn=yes
-set termguicolors
-set list lcs=tab:\|\ 
-set cursorline
-set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait250-blinkoff200-blinkon200-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175
-
-"Settings
-let g:netrw_bufsettings='noma nomod nonu nowrap ro nobl nu rnu'
-let g:gruvbox_contrast_light='hard'
-let g:NERDTreeShowLineNumbers=1
-let NERDTreeShowHidden=1
-let g:NERDCreateDefaultMappings = 0
-let g:NERDSpaceDelims = 1
-let g:NERDCompactSexyComs = 1
-let g:NERDDefaultAlign = 'left'
-let g:NERDCommentEmptyLines = 1
-let g:NERDTrimTrailingWhitespace = 1
-let g:NERDToggleCheckAllLines = 1
+" set autoread
+" set scrolloff=12
+" set rnu
+" set number
+" set tabstop=4 softtabstop=4
+" set shiftwidth=4
+" set expandtab
+" set smartindent
+" set ic is nohls
+" set background=light
+" set signcolumn=yes
+" set termguicolors
+" set list lcs=tab:\|\ 
+" set cursorline
+" set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait250-blinkoff200-blinkon200-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175
+"
+" "Settings
+" let g:netrw_bufsettings='noma nomod nonu nowrap ro nobl nu rnu'
+" let g:gruvbox_contrast_light='hard'
+" let g:NERDTreeShowLineNumbers=1
+" let NERDTreeShowHidden=1
+" let g:NERDCreateDefaultMappings = 0
+" let g:NERDSpaceDelims = 1
+" let g:NERDCompactSexyComs = 1
+" let g:NERDDefaultAlign = 'left'
+" let g:NERDCommentEmptyLines = 1
+" let g:NERDTrimTrailingWhitespace = 1
+" let g:NERDToggleCheckAllLines = 1
 
 "Plugins
 call plug#begin('~/.vim/plugged')
