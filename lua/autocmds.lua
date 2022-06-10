@@ -2,8 +2,7 @@ local creategroup = vim.api.nvim_create_augroup
 local createcmd = vim.api.nvim_create_autocmd
 
 createcmd("BufWritePost", {
--- pattern = "~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc,~/.config/nvim/**/*,~/.config/starship.toml,~/.tmux.conf,/usr/local/bin/*",
-pattern = {"*", "~/.gitconfig"},
+pattern = {"~/.config/nvim/**/*", "~/.gitconfig", "~/.vimrc", "~/.prettierrc", "~/.zshrc", "~/.config/starship.toml", "~/.tmux.conf", "/usr/local/bin/*"},
 group = creategroup("bin_dotfiles_sync", {clear = true}),
 command = "!up %:p"
 })
