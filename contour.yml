@@ -279,7 +279,7 @@ profiles:
             regular:
                 # Font family defines the font family name, such as:
                 # Fira Code", "Courier New", or "monospace" (default).
-                family: Fira Code,"monospace"
+                family: "Fira Code","monospace"
 
                 # Font weight can be one of:
                 #   thin, extra_light, light, demilight, book, normal,
