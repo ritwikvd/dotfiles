@@ -172,23 +172,23 @@ require("autocmds")
 EOF
 
 "Autocmd
-augroup bin_dotfiles_sync
-    au!
-    au BufWritePost ~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc,~/.config/nvim/**/*,~/.config/starship.toml,~/.tmux.conf silent! !up %:p
-    au BufWritePost /usr/local/bin/* silent! !up %:p
-augroup end
-
-augroup prettier
-    au!
-    au BufWritePost ~/Desktop/personal/pushowl/**/* silent! execute "!npx --silent prettier --write --loglevel silent --config ~/.prettierrc %:p" | redraw! 
-augroup end
-
-augroup nerdtree
-    au!
-    au FileType nerdtree setlocal rnu
-augroup end
-
-augroup eslint
-    au!
-    au BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll
-augroup end
+" augroup bin_dotfiles_sync
+"     au!
+"     au BufWritePost ~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc,~/.config/nvim/**/*,~/.config/starship.toml,~/.tmux.conf silent! !up %:p
+"     au BufWritePost /usr/local/bin/* silent! !up %:p
+" augroup end
+"
+" augroup prettier
+"     au!
+"     au BufWritePost ~/Desktop/personal/pushowl/**/* silent! execute "!npx --silent prettier --write --loglevel silent --config ~/.prettierrc %:p" | redraw! 
+" augroup end
+"
+" augroup nerdtree
+"     au!
+"     au FileType nerdtree setlocal rnu
+" augroup end
+"
+" augroup eslint
+"     au!
+"     au BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll
+" augroup end
