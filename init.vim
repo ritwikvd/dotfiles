@@ -166,6 +166,8 @@ settings = {
         }),
         sources = cmp.config.sources({{ name = 'nvim_lsp' },{ name = 'luasnip' }},{{ name = 'buffer'}})
     })
+
+require("remaps")
 EOF
 
 "Autocmd
@@ -191,41 +193,41 @@ augroup eslint
 augroup end
 
 "Remaps
-let mapleader = " "
-nnoremap <leader><CR> :so %<CR>
-nnoremap <leader>p :Telescope git_files<CR>
-nnoremap <leader>P :Telescope find_files<CR>
-nnoremap <leader>j :cnext<CR>
-nnoremap <leader>k :cprev<CR>
-nnoremap <leader>o <cmd>Telescope quickfix<cr>
-nnoremap <leader>a <C-^>
-nnoremap <leader>c "+y
-nnoremap <leader>e :Vex<CR>
-nnoremap <leader>s :w<CR>
-nnoremap <leader><S-S> :wa<CR>
-nnoremap <leader>q :q<CR>
-nnoremap <leader><S-Q> :qa!<CR>
-nnoremap <leader>x :xa<CR>
-nnoremap <leader>f gg=G
-nnoremap <leader>h _
-nnoremap <leader>l $
-nnoremap <leader>b <cmd>lua require'telescope.builtin'.buffers({initial_mode = "normal"})<cr>
-nnoremap <leader><S-F> <cmd>Telescope live_grep<cr>
-nnoremap <leader><S-O> <cmd>lua require'telescope.builtin'.live_grep({grep_open_files=true})<cr>
-nnoremap <expr> <C-n> g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTreeOpen<CR>' : ':NERDTreeFind<CR>'
-
-xnoremap <leader>c "+y
-xnoremap J :m '>+1<CR>gv=gv
-xnoremap K :m '<-2<CR>gv=gv
-
-inoremap <silent> <C-l> <cmd>lua require'luasnip'.jump(1)<Cr>
-inoremap <silent> <C-h> <cmd>lua require'luasnip'.jump(-1)<Cr>
-inoremap <silent> <M-'> ''<Esc>i
-inoremap <silent> <M-"> ""<Esc>i
-inoremap <silent> <M-`> ``<Esc>i
-inoremap <silent> <M-{> {}<Esc>i
-inoremap <silent> <M-[> []<Esc>i
-inoremap <silent> <M-(> ()<Esc>i
-
-snoremap <silent> <C-l> <cmd>lua require'luasnip'.jump(1)<Cr>
-snoremap <silent> <C-h> <cmd>lua require'luasnip'.jump(-1)<Cr>
+" let mapleader = " "
+" nnoremap <leader><CR> :so %<CR>
+" nnoremap <leader>p :Telescope git_files<CR>
+" nnoremap <leader>P :Telescope find_files<CR>
+" nnoremap <leader>j :cnext<CR>
+" nnoremap <leader>k :cprev<CR>
+" nnoremap <leader>o <cmd>Telescope quickfix<cr>
+" nnoremap <leader>a <C-^>
+" nnoremap <leader>c "+y
+" nnoremap <leader>e :Vex<CR>
+" nnoremap <leader>s :w<CR>
+" nnoremap <leader><S-S> :wa<CR>
+" nnoremap <leader>q :q<CR>
+" nnoremap <leader><S-Q> :qa!<CR>
+" nnoremap <leader>x :xa<CR>
+" nnoremap <leader>f gg=G
+" nnoremap <leader>h _
+" nnoremap <leader>l $
+" nnoremap <leader>b <cmd>lua require'telescope.builtin'.buffers({initial_mode = "normal"})<cr>
+" nnoremap <leader><S-F> <cmd>Telescope live_grep<cr>
+" nnoremap <leader><S-O> <cmd>lua require'telescope.builtin'.live_grep({grep_open_files=true})<cr>
+" nnoremap <expr> <C-n> g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTreeOpen<CR>' : ':NERDTreeFind<CR>'
+"
+" xnoremap <leader>c "+y
+" xnoremap J :m '>+1<CR>gv=gv
+" xnoremap K :m '<-2<CR>gv=gv
+"
+" inoremap <silent> <C-l> <cmd>lua require'luasnip'.jump(1)<Cr>
+" inoremap <silent> <C-h> <cmd>lua require'luasnip'.jump(-1)<Cr>
+" inoremap <silent> <M-'> ''<Esc>i
+" inoremap <silent> <M-"> ""<Esc>i
+" inoremap <silent> <M-`> ``<Esc>i
+" inoremap <silent> <M-{> {}<Esc>i
+" inoremap <silent> <M-[> []<Esc>i
+" inoremap <silent> <M-(> ()<Esc>i
+"
+" snoremap <silent> <C-l> <cmd>lua require'luasnip'.jump(1)<Cr>
+" snoremap <silent> <C-h> <cmd>lua require'luasnip'.jump(-1)<Cr>
