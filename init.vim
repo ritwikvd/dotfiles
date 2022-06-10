@@ -173,7 +173,7 @@ EOF
 "Autocmd
 augroup bin_dotfiles_sync
     au!
-    au BufWritePost ~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc,~/.config/nvim/**/*,~/.config/starship.toml,~/.tmux.conf silent! !up %:p
+    au BufWritePost ~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc,~/.config/nvim/**/*,~/.config/starship.toml,~/.tmux.conf !up %:p
     au BufWritePost /usr/local/bin/* silent! !up %:p
 augroup end
 
