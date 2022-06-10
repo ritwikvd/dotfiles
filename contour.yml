@@ -60,7 +60,7 @@ read_buffer_size: 16384
 # Size in bytes per PTY Buffer Object.
 #
 # This is an advanced option of an internal storage. Only change with care!
-pty_buffer_size: 1048576
+pty_baffer_size: 1048576
 
 default_profile: main
 
@@ -279,7 +279,7 @@ profiles:
             regular:
                 # Font family defines the font family name, such as:
                 # Fira Code", "Courier New", or "monospace" (default).
-                family: FuraCode Nerd Font, "monospace"
+                family: FuraCode, "monospace"
 
                 # Font weight can be one of:
                 #   thin, extra_light, light, demilight, book, normal,
@@ -287,7 +287,7 @@ profiles:
                 weight: regular
 
                 # Font slant can be one of: normal, italic, oblique.
-                slant: normal
+                slant: italic
 
                 # Set of optional font features to be enabled. This
                 # is usually a 4-letter code, such as ss01 or ss02 etc.
