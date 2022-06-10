@@ -4,7 +4,7 @@ local createcmd = vim.api.nvim_create_autocmd
 local syncgroup = creategroup("bin_dotfiles_sync", {clear = true})
 
 createcmd("BufWritePost", {
-pattern = {"*", "~/.config/nvim/**/*", "~/.gitconfig", "~/.vimrc", "~/.prettierrc", "~/.zshrc", "~/.config/starship.toml", "~/.tmux.conf", "/usr/local/bin/*"},
+pattern = {"~/.config/nvim/**/*", "~/.gitconfig", "~/.vimrc", "~/.prettierrc", "~/.zshrc", "~/.config/starship.toml", "~/.tmux.conf", "/usr/local/bin/*"},
 group = syncgroup,
 command = "silent! !up %:p"
 })
