@@ -21,12 +21,14 @@ local nerdgroup = creategroup("nerdtreegroup", {clear = true})
 
 createcmd("FileType", {
 pattern = "nerdtree",
-group = creategroup("nerdtree", {clear = true}),
+group = nerdgroup,
 command = "setlocal rnu"
 })
 
+local eslintgroup = creategroup("eslintgroup", {clear = true})
+
 createcmd("BufWritePre", {
 pattern = "*.tsx,*.ts,*.jsx,*.js",
-group = creategroup("eslint", {clear = true}),
+group = eslintgroup,
 command = "EslintFixAll"
 })
