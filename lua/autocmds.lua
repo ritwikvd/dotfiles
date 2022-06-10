@@ -1,34 +1,33 @@
-local creategroup = vim.api.nvim_create_augroup
-local createcmd = vim.api.nvim_create_autocmd
+local creategroup = function (...)
+    return vim.api.nvim_create_augroup(..., {clear = true})
+end
 
-local syncgroup = creategroup("bin_dotfiles_sync", {clear = true})
+local createcmd = vim.api.nvim_create_autocmd
+local home = "/Users/ritwik"
+
+local patternstring = string.gsub("~/.config/**/*,~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc,~/.tmux.conf,/usr/local/bin/*", "~", home)
+local patternlist = vim.split(patternstring, ",")
 
 createcmd("BufWritePost", {
-pattern = {"/Users/ritwik/.config/**/*", "/Users/ritwik/.gitconfig", "/Users/ritwik/.vimrc", "/Users/ritwik/.prettierrc", "/Users/ritwik/.zshrc", "/Users/ritwik/.tmux.conf", "/usr/local/bin/*"},
-group = syncgroup,
+pattern = patternlist,
+group = creategroup("bin_dotfiles_sync"),
 command = "silent! !up %:p"
 })
 
-local prettiergroup = creategroup("prettier", {clear = true})
-
 createcmd("BufWritePost", {
-pattern = "/Users/ritwik/Desktop/personal/pushowl/**/*",
-group = prettiergroup,
-command = "silent! execute \"!npx --silent prettier --write --loglevel silent --config /Users/ritwik/.prettierrc %:p\" | redraw!"
+pattern = home.."/Desktop/personal/pushowl/**/*",
+group = creategroup("prettier"),
+command = "silent! execute \"!npx --silent prettier --write --loglevel silent --config ~/.prettierrc %:p\" | redraw!"
 })
-
-local nerdgroup = creategroup("nerdtreegroup", {clear = true})
 
 createcmd("FileType", {
 pattern = "nerdtree",
-group = nerdgroup,
+group = creategroup("nerdtree"),
 command = "setlocal rnu"
 })
 
-local eslintgroup = creategroup("eslintgroup", {clear = true})
-
 createcmd("BufWritePre", {
 pattern = "*.tsx,*.ts,*.jsx,*.js",
-group = eslintgroup,
+group = creategroup("eslint"),
 command = "EslintFixAll"
 })
