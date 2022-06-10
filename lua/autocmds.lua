@@ -4,7 +4,7 @@ local createcmd = vim.api.nvim_create_autocmd
 local syncgroup = creategroup("bin_dotfiles_sync", {clear = true})
 
 createcmd("BufWritePost", {
-pattern = {"~/.config/nvim/**/*", "~/.gitconfig", "~/.vimrc", "~/.prettierrc", "~/.zshrc", "~/.config/starship.toml", "~/.tmux.conf", "/usr/local/bin/*"},
+pattern = {"/Users/ritwik/.config/**/*", "/Users/ritwik/.gitconfig", "/Users/ritwik/.vimrc", "/Users/ritwik/.prettierrc", "/Users/ritwik/.zshrc", "/Users/ritwik/.tmux.conf", "/usr/local/bin/*"},
 group = syncgroup,
 command = "silent! !up %:p"
 })
@@ -12,9 +12,9 @@ command = "silent! !up %:p"
 local prettiergroup = creategroup("prettier", {clear = true})
 
 createcmd("BufWritePost", {
-pattern = "~/Desktop/personal/pushowl/**/*",
+pattern = "/Users/ritwik/Desktop/personal/pushowl/**/*",
 group = prettiergroup,
-command = "silent! execute \"!npx --silent prettier --write --loglevel silent --config ~/.prettierrc %:p\" | redraw!"
+command = "silent! execute \"!npx --silent prettier --write --loglevel silent --config /Users/ritwik/.prettierrc %:p\" | redraw!"
 })
 
 local nerdgroup = creategroup("nerdtreegroup", {clear = true})
