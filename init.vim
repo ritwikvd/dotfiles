@@ -168,6 +168,7 @@ settings = {
     })
 
 require("remaps")
+require("autocmds")
 EOF
 
 "Autocmd
