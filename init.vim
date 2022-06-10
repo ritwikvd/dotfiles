@@ -59,6 +59,7 @@ colorscheme gruvbox
 hi CursorLineNr guifg=DarkMagenta
 
 lua << EOF
+require("settings")
 require'nvim-treesitter.configs'.setup {
   context_commentstring = { enable = true },
   autotag = { enable = true }
