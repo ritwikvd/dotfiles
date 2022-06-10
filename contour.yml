@@ -279,7 +279,7 @@ profiles:
             regular:
                 # Font family defines the font family name, such as:
                 # Fira Code", "Courier New", or "monospace" (default).
-                family: FuraCode, "monospace"
+                family: Fira Code,"monospace"
 
                 # Font weight can be one of:
                 #   thin, extra_light, light, demilight, book, normal,
@@ -345,7 +345,7 @@ profiles:
         background:
             # Background opacity to use. A value of 1.0 means fully opaque whereas 0.0 means fully
             # transparent. Only values between 0.0 and 1.0 are allowed.
-            opacity: 1.0
+            opacity: 0.9
             # Some platforms can blur the transparent background (currently only Windows 10 is supported).
             blur: false
 
