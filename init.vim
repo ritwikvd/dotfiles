@@ -1,4 +1,5 @@
 "Set Options
+"vim.opt
 set autoread
 set scrolloff=12
 set rnu
