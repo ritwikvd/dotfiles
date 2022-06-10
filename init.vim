@@ -60,7 +60,7 @@ call plug#end()
 
 lua << EOF
 require("settings")
-require("commands.lua")
+require("commands")
 
 require'nvim-treesitter.configs'.setup {
   context_commentstring = { enable = true },
