@@ -9,11 +9,15 @@ group = syncgroup,
 command = "silent! !up %:p"
 })
 
+local prettiergroup = creategroup("prettier", {clear = true})
+
 createcmd("BufWritePost", {
 pattern = "~/Desktop/personal/pushowl/**/*",
-group = creategroup("prettier", {clear = true}),
+group = prettiergroup,
 command = "silent! execute \"!npx --silent prettier --write --loglevel silent --config ~/.prettierrc %:p\" | redraw!"
 })
+
+local nerdgroup = creategroup("nerdtreegroup", {clear = true})
 
 createcmd("FileType", {
 pattern = "nerdtree",
