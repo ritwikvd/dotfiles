@@ -55,11 +55,13 @@ Plug 'numToStr/Comment.nvim'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 call plug#end()
 
-colorscheme gruvbox
-hi CursorLineNr guifg=DarkMagenta
+" colorscheme gruvbox
+" hi CursorLineNr guifg=DarkMagenta
 
 lua << EOF
 require("settings")
+require("commands.lua")
+
 require'nvim-treesitter.configs'.setup {
   context_commentstring = { enable = true },
   autotag = { enable = true }
