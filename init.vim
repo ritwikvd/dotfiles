@@ -31,28 +31,28 @@
 
 "Plugins
 call plug#begin('~/.vim/plugged')
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'preservim/nerdtree'
-Plug 'gruvbox-community/gruvbox'
-Plug 'ryanoasis/vim-devicons'
-Plug 'kyazdani42/nvim-web-devicons'
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'L3MON4D3/LuaSnip'
-Plug 'saadparwaiz1/cmp_luasnip'
-Plug 'tpope/vim-surround'
-Plug 'mattn/emmet-vim'
-Plug 'rafamadriz/friendly-snippets'
-Plug 'nvim-telescope/telescope-ui-select.nvim'
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'numToStr/Comment.nvim'
-Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+" Plug 'nvim-lua/plenary.nvim'
+" Plug 'nvim-telescope/telescope.nvim'
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Plug 'preservim/nerdtree'
+" Plug 'gruvbox-community/gruvbox'
+" Plug 'ryanoasis/vim-devicons'
+" Plug 'kyazdani42/nvim-web-devicons'
+" Plug 'neovim/nvim-lspconfig'
+" Plug 'hrsh7th/nvim-cmp'
+" Plug 'hrsh7th/cmp-nvim-lsp'
+" Plug 'hrsh7th/cmp-buffer'
+" Plug 'hrsh7th/cmp-path'
+" Plug 'L3MON4D3/LuaSnip'
+" Plug 'saadparwaiz1/cmp_luasnip'
+" Plug 'tpope/vim-surround'
+" Plug 'mattn/emmet-vim'
+" Plug 'rafamadriz/friendly-snippets'
+" Plug 'nvim-telescope/telescope-ui-select.nvim'
+" Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+" Plug 'numToStr/Comment.nvim'
+" Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 call plug#end()
 
 " colorscheme gruvbox
@@ -61,6 +61,7 @@ call plug#end()
 lua << EOF
 require("settings")
 require("commands")
+require("plugins")
 
 require'nvim-treesitter.configs'.setup {
   context_commentstring = { enable = true },
