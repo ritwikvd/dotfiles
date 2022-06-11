@@ -9,7 +9,7 @@ o.scrolloff = 12
 o.rnu = true; o.nu = true
 o.tabstop = 4; o.softtabstop = 4; o.shiftwidth = 4; o.expandtab = true
 o.smartindent = true
-o.ic = true; o.is = true
+o.ic = true; o.is = true; o.hls = false
 o.background = "light"
 o.signcolumn = "yes"
 o.termguicolors = true
