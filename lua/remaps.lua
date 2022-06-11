@@ -30,8 +30,8 @@ nset("<leader>O", "<cmd>lua require('telescope.builtin').live_grep({grep_open_fi
 nset("<leader>F", "<cmd>Telescope live_grep<cr>", {desc = "Telescope Live Grep"})
 nset("<c-n>", "g:NERDTree.IsOpen() ? ':NERDTreeClose<cr>' : @% == '' ? ':NERDTreeOpen<cr>' : ':NERDTreeFind<cr>'", {expr = true, desc = "NERDTree Working"})
 
-xset("J", "<cmd>m '>+1<cr>gv", {desc = "Move Line Down"})
-xset("K", "<cmd>m '<-2<cr>gv=gv", {desc = "Move Line Up"})
+-- xset("J", "<cmd>m '>+1<cr>gv", {desc = "Move Line Down"})
+-- xset("K", "<cmd>m '<-2<cr>gv=gv", {desc = "Move Line Up"})
 
 iset("<c-l>", "<cmd>lua require('luasnip').jump(1)<cr>", {desc = "Next Snippet Location"})
 iset("<c-h>", "<cmd>lua require('luasnip').jump(-1)<cr>", {desc = "Previous Snippet Location"})
