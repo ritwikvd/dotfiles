@@ -30,7 +30,7 @@
 " let g:NERDToggleCheckAllLines = 1
 
 "Plugins
-call plug#begin('~/.vim/plugged')
+" call plug#begin('~/.vim/plugged')
 " Plug 'nvim-lua/plenary.nvim'
 " Plug 'nvim-telescope/telescope.nvim'
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -53,7 +53,7 @@ call plug#begin('~/.vim/plugged')
 " Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 " Plug 'numToStr/Comment.nvim'
 " Plug 'JoosepAlviste/nvim-ts-context-commentstring'
-call plug#end()
+" call plug#end()
 
 " colorscheme gruvbox
 " hi CursorLineNr guifg=DarkMagenta
