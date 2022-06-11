@@ -3,7 +3,7 @@ local set = vim.keymap.set
 
 local function nset(...) set("n", ...) end
 local function iset(...) set("i", ...) end
-local function xset(...) set("x", ...) end
+-- local function xset(...) set("x", ...) end
 local function sset(...) set("s", ...) end
 
 set({"n", "x"}, "<leader>c", "\"+y", {desc = "Copy Into Clipboard"})
