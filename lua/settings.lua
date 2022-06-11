@@ -16,7 +16,7 @@ o.termguicolors = true
 o.list = true; o.lcs = "tab:| "
 o.cursorline = true
 o.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait250-blinkoff200-blinkon200-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
-o.completeopt = {"menu", "menuone", "noselect"}
+o.completeopt = "menu,menuone,noselect"
 
 g.netrw_bufsettings = "noma nomod nonu nowrap ro nobl nu rnu"
 g.gruvbox_contrast_list = "hard"
