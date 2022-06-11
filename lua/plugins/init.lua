@@ -1,4 +1,6 @@
 local treesitterconfig = require("plugins.configs.treesitter")
+
+
 return require("packer").startup(function (use)
 
 use("wbthomason/packer.nvim")
