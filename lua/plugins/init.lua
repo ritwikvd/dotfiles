@@ -2,7 +2,7 @@ local treesitterconfig = require("plugins.configs.treesitter")
 local commentconfig = require("plugins.configs.comment")
 local deviconsconfig = require("plugins.configs.devicons")
 local telescopeconfig = require("plugins.configs.telescope")
-local cmpsnipconfig = require("plugins.configs.cmpsnip")
+local cmpsniplspconfig = require("plugins.configs.cmpsniplsp")
 
 return require("packer").startup(function (use)
 
@@ -15,7 +15,7 @@ return require("packer").startup(function (use)
     use({ "ryanoasis/vim-devicons", disabled = true})
     use({ "kyazdani42/nvim-web-devicons", config = deviconsconfig })
     use("neovim/nvim-lspconfig")
-    use({ "hrsh7th/nvim-cmp", config = cmpsnipconfig, requires = {
+    use({ "hrsh7th/nvim-cmp", config = cmpsniplspconfig, requires = {
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
