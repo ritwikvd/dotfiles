@@ -6,12 +6,11 @@ return require("packer").startup(function (use)
     use("wbthomason/packer.nvim")
     use("nvim-lua/plenary.nvim")
     use("nvim-telescope/telescope.nvim")
-    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", setup = function ()
-        require'nvim-treesitter.configs'.setup {
+    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", config = function ()
+        require("nvim-treesitter.configs").setup({
             context_commentstring = { enable = true },
             autotag = { enable = true }
-        }
-
+        })
     end})
     use("preservim/nerdtree")
     use("gruvbox-community/gruvbox")
