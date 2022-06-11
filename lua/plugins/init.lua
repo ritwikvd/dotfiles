@@ -1,5 +1,6 @@
 local treesitterconfig = require("plugins.configs.treesitter")
 local commentconfig = require("plugins.configs.comment")
+local deviconsconfig = require("plugins.configs.devicons")
 
 
 return require("packer").startup(function (use)
@@ -11,7 +12,7 @@ return require("packer").startup(function (use)
     use("preservim/nerdtree")
     use("gruvbox-community/gruvbox")
     use("ryanoasis/vim-devicons")
-    use("kyazdani42/nvim-web-devicons")
+    use({ "kyazdani42/nvim-web-devicons", config = deviconsconfig })
     use("neovim/nvim-lspconfig")
     use("hrsh7th/nvim-cmp")
     use("hrsh7th/cmp-nvim-lsp")
