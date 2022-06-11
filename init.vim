@@ -60,13 +60,13 @@
 
 lua << EOF
 require("settings")
-require("commands")
 require("plugins")
+require("commands")
 
-require'nvim-treesitter.configs'.setup {
-  context_commentstring = { enable = true },
-  autotag = { enable = true }
-}
+--require'nvim-treesitter.configs'.setup {
+--  context_commentstring = { enable = true },
+--  autotag = { enable = true }
+--}
 
 require'Comment'.setup{
 pre_hook = function(ctx)
