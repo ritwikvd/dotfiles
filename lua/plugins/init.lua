@@ -8,13 +8,29 @@ return require("packer").startup(function (use)
 
     use("wbthomason/packer.nvim")
     use("nvim-lua/plenary.nvim")
-    use({ "nvim-telescope/telescope.nvim", config = telescopeconfig, requires = {"nvim-telescope/telescope-ui-select.nvim", {"nvim-telescope/telescope-fzf-native.nvim", run = "make"}}})
-    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", config = treesitterconfig})
     use("preservim/nerdtree")
     use("gruvbox-community/gruvbox")
-    use({ "ryanoasis/vim-devicons", disabled = true})
-    use({ "kyazdani42/nvim-web-devicons", config = deviconsconfig })
     use("neovim/nvim-lspconfig")
+    use({ "ryanoasis/vim-devicons", disabled = true})
+    use("tpope/vim-surround")
+    use("mattn/emmet-vim")
+    use("JoosepAlviste/nvim-ts-context-commentstring")
+    use({ "styled-components/vim-styled-components", branch = "main" })
+
+    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", config = treesitterconfig})
+    use({ "kyazdani42/nvim-web-devicons", config = deviconsconfig })
+    use({ "numToStr/Comment.nvim", config = commentconfig })
+
+    use({ "nvim-telescope/telescope.nvim",
+    config = telescopeconfig,
+    requires = {
+        "nvim-telescope/telescope-ui-select.nvim",
+        {
+            "nvim-telescope/telescope-fzf-native.nvim",
+            run = "make"
+        }
+    }})
+
     use({ "hrsh7th/nvim-cmp", config = cmpsniplspconfig, requires = {
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-buffer",
@@ -23,11 +39,6 @@ return require("packer").startup(function (use)
         "saadparwaiz1/cmp_luasnip",
         "rafamadriz/friendly-snippets"
     }})
-    use("tpope/vim-surround")
-    use("mattn/emmet-vim")
-    use({ "styled-components/vim-styled-components", branch = "main" })
-    use({ "numToStr/Comment.nvim", config = commentconfig })
-    use("JoosepAlviste/nvim-ts-context-commentstring")
 
 end)
 
