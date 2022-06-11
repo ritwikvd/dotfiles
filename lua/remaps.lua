@@ -3,7 +3,7 @@ local set = vim.keymap.set
 
 local function nset(...) set("n", ...) end
 local function iset(...) set("i", ...) end
-local function xset(...) set("v", ...) end
+local function xset(...) set("x", ...) end
 local function sset(...) set("s", ...) end
 
 set({"n", "x"}, "<leader>c", "\"+y", {desc = "Copy Into Clipboard"})
@@ -30,7 +30,7 @@ nset("<leader>O", "<cmd>lua require('telescope.builtin').live_grep({grep_open_fi
 nset("<leader>F", "<cmd>Telescope live_grep<cr>", {desc = "Telescope Live Grep"})
 nset("<c-n>", "g:NERDTree.IsOpen() ? ':NERDTreeClose<cr>' : @% == '' ? ':NERDTreeOpen<cr>' : ':NERDTreeFind<cr>'", {expr = true, desc = "NERDTree Working"})
 
-xset("J", "<cmd>m '>+1<cr>gv=gv", {desc = "Move Line Down"})
+xset("J", "<cmd>m '>+1<cr>gv", {desc = "Move Line Down"})
 xset("K", "<cmd>m '<-2<cr>gv=gv", {desc = "Move Line Up"})
 
 iset("<c-l>", "<cmd>lua require('luasnip').jump(1)<cr>", {desc = "Next Snippet Location"})
