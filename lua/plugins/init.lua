@@ -1,4 +1,5 @@
 local treesitterconfig = require("plugins.configs.treesitter")
+local commentconfig = require("plugins.configs.comment")
 
 
 return require("packer").startup(function (use)
@@ -24,7 +25,7 @@ return require("packer").startup(function (use)
     use("nvim-telescope/telescope-ui-select.nvim")
     use({ "nvim-telescope/telescope-fzf-native.nvim",  run = "make" })
     use({ "styled-components/vim-styled-components", branch = "main" })
-    use("numToStr/Comment.nvim")
+    use({ "numToStr/Comment.nvim", config = commentconfig })
     use("JoosepAlviste/nvim-ts-context-commentstring")
 
 end)
