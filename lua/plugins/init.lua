@@ -1,4 +1,4 @@
--- local treesitterconfig = require("plugins.configs.treesitter")
+local treesitterconfig = require("plugins.configs.treesitter")
 
 
 return require("packer").startup(function (use)
@@ -6,12 +6,7 @@ return require("packer").startup(function (use)
     use("wbthomason/packer.nvim")
     use("nvim-lua/plenary.nvim")
     use("nvim-telescope/telescope.nvim")
-    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", config = function ()
-        require("nvim-treesitter.configs").setup({
-            context_commentstring = { enable = true },
-            autotag = { enable = true }
-        })
-    end})
+    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", config = treesitterconfig})
     use("preservim/nerdtree")
     use("gruvbox-community/gruvbox")
     use("ryanoasis/vim-devicons")
