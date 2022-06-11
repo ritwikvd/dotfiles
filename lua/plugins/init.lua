@@ -16,6 +16,7 @@ return require("packer").startup(function (use)
     use("mattn/emmet-vim")
     use("JoosepAlviste/nvim-ts-context-commentstring")
     use({ "styled-components/vim-styled-components", branch = "main" })
+    use({"feline-nvim/feline.nvim", config = function () require("feline").setup() end})
 
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", config = treesitterconfig})
     use({ "kyazdani42/nvim-web-devicons", config = deviconsconfig })
