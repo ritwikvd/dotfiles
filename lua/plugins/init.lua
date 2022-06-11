@@ -1,13 +1,14 @@
 local treesitterconfig = require("plugins.configs.treesitter")
 local commentconfig = require("plugins.configs.comment")
 local deviconsconfig = require("plugins.configs.devicons")
+local telescopeconfig = require("plugins.configs.telescope")
 
 
 return require("packer").startup(function (use)
 
     use("wbthomason/packer.nvim")
     use("nvim-lua/plenary.nvim")
-    use({ "nvim-telescope/telescope.nvim", requires = {"nvim-telescope/telescope-ui-select.nvim", {"nvim-telescope/telescope-fzf-native.nvim", run = "make"}}})
+    use({ "nvim-telescope/telescope.nvim", config = telescopeconfig, requires = {"nvim-telescope/telescope-ui-select.nvim", {"nvim-telescope/telescope-fzf-native.nvim", run = "make"}}})
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", config = treesitterconfig})
     use("preservim/nerdtree")
     use("gruvbox-community/gruvbox")
