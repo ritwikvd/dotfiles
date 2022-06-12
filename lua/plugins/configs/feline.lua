@@ -14,6 +14,9 @@ return function ()
             name = require('feline.providers.vi_mode').get_mode_highlight_name(),
             fg = require('feline.providers.vi_mode').get_mode_color(),
             style = 'bold'
+        },
+        opts = {
+            show_mode_name = true
         }
     end
     }
