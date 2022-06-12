@@ -13,7 +13,7 @@ local patternlist = vim.split(patternstring, ",")
 -- group = creategroup("bin_dotfiles_sync"),
 -- command = "silent! !up %:p"
 -- })
-
+--
 createcmd("BufWritePost", {
 pattern = home.."/Desktop/personal/pushowl/**/*",
 group = creategroup("prettier"),
