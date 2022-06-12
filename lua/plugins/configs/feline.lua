@@ -14,9 +14,9 @@ return function ()
     table.insert(activeleft, mode)
 
     require("feline").setup({
-        -- components = {
-        --     active = active,
-        --     ianctive = inactive
-        -- }
+        components = {
+            active = active,
+            ianctive = inactive
+        }
     })
 end
