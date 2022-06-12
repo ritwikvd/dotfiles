@@ -9,6 +9,7 @@ return function ()
 
     local mode = {
         provider = "vi_mode",
+        icon = " ",
         hl = function()
             return {
                 name = require('feline.providers.vi_mode').get_mode_highlight_name(),
