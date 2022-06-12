@@ -8,7 +8,14 @@ return function ()
     table.insert(inactive, inactiveright)
 
     local mode = {
-        provider = "vi_mode"
+        provider = "vi_mode",
+        hl = function()
+        return {
+            name = require('feline.providers.vi_mode').get_mode_highlight_name(),
+            fg = require('feline.providers.vi_mode').get_mode_color(),
+            style = 'bold'
+        }
+    end
     }
 
     table.insert(activeleft, mode)
