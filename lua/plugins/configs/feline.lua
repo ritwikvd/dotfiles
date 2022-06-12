@@ -10,15 +10,16 @@ return function ()
     local mode = {
         provider = "vi_mode",
         hl = function()
-        return {
-            name = require('feline.providers.vi_mode').get_mode_highlight_name(),
-            fg = require('feline.providers.vi_mode').get_mode_color(),
-            style = 'bold'
+            return {
+                name = require('feline.providers.vi_mode').get_mode_highlight_name(),
+                fg = require('feline.providers.vi_mode').get_mode_color(),
+                style = 'bold'
+            }
+        end,
+        show_mode_name = true,
+        opts = {
+            show_mode_name = true
         }
-    end,
-    opts = {
-        show_mode_name = true
-    }
     }
 
     table.insert(activeleft, mode)
