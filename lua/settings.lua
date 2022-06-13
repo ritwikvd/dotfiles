@@ -4,12 +4,6 @@ local o = vim.o
 -- Global Properties
 local g = vim.g
 
-global = "something"
-{
-local global = "sdkfj"}
-
-global.sdf()
-
 o.autoread = true
 o.scrolloff = 12
 o.rnu = true; o.nu = true
