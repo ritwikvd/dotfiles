@@ -1,4 +1,5 @@
-table.sort(vim.fn.getqflist(), function(a,b) 
+local a = vim.fn.getqflist()
+table.sort(a, function(a,b) 
 return b.bufnr < a.bufnr
 end)
-vim.fn.setqflist(vim.fn.getqflist())
+vim.fn.setqflist(a)
