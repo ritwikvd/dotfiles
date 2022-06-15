@@ -41,7 +41,7 @@ vim.cmd("%s/"..reg.."/"..input)
 -- vim.cmd("%s/"..reg.."/"..input.."<cr>")
 end)
 end, {desc = "Move Line Up"})
-sdkfja
+local = sdkfja
 iset("<c-l>", "<cmd>lua require('luasnip').jump(1)<cr>", {desc = "Next Snippet Location"})
 iset("<c-h>", "<cmd>lua require('luasnip').jump(-1)<cr>", {desc = "Previous Snippet Location"})
 
