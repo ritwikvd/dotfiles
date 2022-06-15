@@ -33,13 +33,13 @@ nset("<c-n>", "g:NERDTree.IsOpen() ? ':NERDTreeClose<cr>' : @% == '' ? ':NERDTre
 -- xset("J", "<cmd>m '>+1<cr>gv", {desc = "Move Line Down"})
 -- xset("K", "<cmd>m '<-2<cr>gv=gv", {desc = "Move Line Up"})
 xset("<leader>r", function ()
-vim.ui.input({prompt = "Enter replacement string: "}, function (input)
-vim.cmd("\"zy")
-local reg = vim.fn.getreg("z") or "testing"
-print("%%s%/"..reg.."/"..input)
-vim.cmd("%s/"..reg.."/"..input)
--- vim.cmd("%s/"..reg.."/"..input.."<cr>")
-end)
+    vim.cmd("\"zy")
+-- vim.ui.input({prompt = "Enter replacement string: "}, function (input)
+-- local reg = vim.fn.getreg("z") or "testing"
+-- print("%%s%/"..reg.."/"..input)
+-- vim.cmd("%s/"..reg.."/"..input)
+-- -- vim.cmd("%s/"..reg.."/"..input.."<cr>")
+-- end)
 end, {desc = "Move Line Up"})
 local test = "fasd"
 iset("<c-l>", "<cmd>lua require('luasnip').jump(1)<cr>", {desc = "Next Snippet Location"})
