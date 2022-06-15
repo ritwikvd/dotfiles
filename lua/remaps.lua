@@ -37,11 +37,11 @@ vim.cmd("\"zy")
 vim.ui.input({prompt = "Enter replacement string: "}, function (input)
 local reg = vim.fn.getreg("z")
 print("%s/"..reg.."/"..input.."<cr>")
-vim.api.nvim_command("%s/"..reg.."/"..input)
+vim.cmd("%s/"..reg.."/"..input)
 -- vim.cmd("%s/"..reg.."/"..input.."<cr>")
 end)
 end, {desc = "Move Line Up"})
-
+sdkfja
 iset("<c-l>", "<cmd>lua require('luasnip').jump(1)<cr>", {desc = "Next Snippet Location"})
 iset("<c-h>", "<cmd>lua require('luasnip').jump(-1)<cr>", {desc = "Previous Snippet Location"})
 
