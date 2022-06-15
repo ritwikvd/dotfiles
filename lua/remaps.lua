@@ -35,7 +35,7 @@ nset("<c-n>", "g:NERDTree.IsOpen() ? ':NERDTreeClose<cr>' : @% == '' ? ':NERDTre
 xset("<leader>r", function ()
 vim.ui.input({prompt = "Enter replacement string: "}, function (input)
 vim.cmd("\"zy")
-local reg = vim.fn.getreg("z")
+local reg = vim.fn.getreg("z") or "testing"
 print("%%s%/"..reg.."/"..input)
 vim.cmd("%s/"..reg.."/"..input)
 -- vim.cmd("%s/"..reg.."/"..input.."<cr>")
