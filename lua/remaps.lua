@@ -3,7 +3,7 @@ local set = vim.keymap.set
 
 local function nset(...) set("n", ...) end
 local function iset(...) set("i", ...) end
-local function xset(...) set("x", ...) end
+local function xset(...) set("v", ...) end
 local function sset(...) set("s", ...) end
 
 set({"n", "x"}, "<leader>c", "\"+y", {desc = "Copy Into Clipboard"})
@@ -41,7 +41,9 @@ xset("<leader>r", function ()
 -- -- vim.cmd("%s/"..reg.."/"..input.."<cr>")
 -- end)
 end, {desc = "Move Line Up"})
+
 local test = "fasd"
+
 iset("<c-l>", "<cmd>lua require('luasnip').jump(1)<cr>", {desc = "Next Snippet Location"})
 iset("<c-h>", "<cmd>lua require('luasnip').jump(-1)<cr>", {desc = "Previous Snippet Location"})
 
