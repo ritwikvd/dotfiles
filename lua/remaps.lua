@@ -36,7 +36,7 @@ xset("<leader>r", function ()
 vim.cmd("\"zy")
 vim.ui.input({prompt = "Enter replacement string: "}, function (input)
 local reg = vim.fn.getreg("z")
-vim.cmd( "%s/"..reg.."/"..input.."<cr>")
+vim.cmd("%s/"..reg.."/"..input.."<cr>")
 end)
 end, {desc = "Move Line Up"})
 
