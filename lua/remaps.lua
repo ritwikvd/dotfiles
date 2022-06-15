@@ -3,7 +3,7 @@ local set = vim.keymap.set
 
 local function nset(...) set("n", ...) end
 local function iset(...) set("i", ...) end
--- local function xset(...) set("x", ...) end
+local function xset(...) set("x", ...) end
 local function sset(...) set("s", ...) end
 
 set({"n", "x"}, "<leader>c", "\"+y", {desc = "Copy Into Clipboard"})
@@ -32,6 +32,7 @@ nset("<c-n>", "g:NERDTree.IsOpen() ? ':NERDTreeClose<cr>' : @% == '' ? ':NERDTre
 
 -- xset("J", "<cmd>m '>+1<cr>gv", {desc = "Move Line Down"})
 -- xset("K", "<cmd>m '<-2<cr>gv=gv", {desc = "Move Line Up"})
+xset("<leader>r", "\"zy <cmd>%s/<c-r>z/", {desc = "Move Line Up"})
 
 iset("<c-l>", "<cmd>lua require('luasnip').jump(1)<cr>", {desc = "Next Snippet Location"})
 iset("<c-h>", "<cmd>lua require('luasnip').jump(-1)<cr>", {desc = "Previous Snippet Location"})
