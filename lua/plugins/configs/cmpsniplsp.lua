@@ -14,8 +14,8 @@ return function ()
     capabilities.textDocument.completion.completionItem.snippetSupport = true
 
     lspconfig.eslint.setup{}
-    lspconfig.cssls.setup({capabilities = capabilities, 
-filetypes = {"css", "scss", "less", "typescript"}})
+    lspconfig.cssls.setup({capabilities = capabilities,
+    filetypes = {"css", "scss", "less", "typescript"}})
 
     local mappings = function()
         vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0})
@@ -63,4 +63,4 @@ filetypes = {"css", "scss", "less", "typescript"}})
         sources = cmp.config.sources({{ name = 'nvim_lsp' },{ name = 'luasnip' }},{{ name = 'buffer'}})
     })
 
-    end
+end
