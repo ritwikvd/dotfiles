@@ -38,10 +38,11 @@ xset("<leader>r", function ()
     local reg = vim.fn.getreg("z") or "testing"
     print("this is the reg"..reg)
     vim.cmd("%s/"..reg.."/"..input)
+    vim.cmd("gv")
 end)end)
 
 
-local test = "fasd"
+local test = "sadf"
 
 iset("<c-l>", "<cmd>lua require('luasnip').jump(1)<cr>", {desc = "Next Snippet Location"})
 iset("<c-h>", "<cmd>lua require('luasnip').jump(-1)<cr>", {desc = "Previous Snippet Location"})
