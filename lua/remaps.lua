@@ -43,7 +43,7 @@ xset("<leader>r", function ()
     vim.ui.input({prompt = "Enter replacement string: "}, function (input)
         local reg = vim.fn.getreg("z")
         if reg == "" then return end
-        vim.cmd("%s/"..reg.."/"..input)
+        vim.cmd("%s/"..reg.."/"..input.."/c")
         vim.cmd("normal gv")
     end)
 end, {desc = "Replace all instances of the highlighted text"})
