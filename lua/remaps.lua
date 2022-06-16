@@ -38,11 +38,9 @@ xset("<leader>r", function ()
         local reg = vim.fn.getreg("z")
         if not reg then return end
         vim.cmd("%s/"..reg.."/"..input)
-        vim.cmd("normal gv")
+        vim.cmd("normal gv \<esc\> viw")
     end)
 end)
-
-local test = "sadf"
 
 iset("<c-l>", "<cmd>lua require('luasnip').jump(1)<cr>", {desc = "Next Snippet Location"})
 iset("<c-h>", "<cmd>lua require('luasnip').jump(-1)<cr>", {desc = "Previous Snippet Location"})
