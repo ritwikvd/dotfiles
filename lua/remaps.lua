@@ -34,13 +34,15 @@ nset("<c-n>", "g:NERDTree.IsOpen() ? ':NERDTreeClose<cr>' : @% == '' ? ':NERDTre
 -- xset("K", "<cmd>m '<-2<cr>gv=gv", {desc = "Move Line Up"})
 xset("<leader>r", function ()
     vim.cmd("\"zy")
+    vim.loop.sleep(2000)
     vim.ui.input({prompt = "Enter replacement string: "}, function (input)
-    local reg = vim.fn.getreg("z") or "testing"
-    print("this is the reg"..reg)
-    vim.cmd("%s/"..reg.."/"..input)
-    vim.cmd("gv")
-end)end)
-
+        local reg = vim.fn.getreg("z")
+        if not reg then return end
+        print("this is the reg"..reg)
+        vim.cmd("%s/"..reg.."/"..input)
+        vim.cmd("gv")
+    end)
+end)
 
 local test = "sadf"
 
