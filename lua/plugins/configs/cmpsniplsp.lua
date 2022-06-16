@@ -15,7 +15,8 @@ return function ()
 
     lspconfig.eslint.setup{}
     lspconfig.cssls.setup({capabilities = capabilities,
-    --[[ filetypes = {"css", "scss", "less", "typescript"} ]]})
+     filetypes = {"css", "scss", "less", "typescript"}
+    })
 
     local mappings = function()
         vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0})
