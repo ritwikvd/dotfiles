@@ -8,7 +8,13 @@ local function sset(...) set("s", ...) end
 
 set({"n", "x"}, "<leader>c", "\"+y", {desc = "Copy Into Clipboard"})
 
-nset("<leader><cr>", "<cmd>so %<cr>", {desc = "Source file"})
+nset("<leader><cr>",
+    function ()
+        local filepath = vim.fn.expand("%:p")
+        if string.find(filepath, "nvim/plugins/") then require("packer").compile() end
+        vim.cmd("so %")
+    end,
+    {desc = "Source file"})
 nset("<leader>p", "<cmd>Telescope git_files<cr>", {desc = "Open Git Files"})
 nset("<leader>P", "<cmd>Telescope find_files<cr>", {desc = "Open All Files"})
 nset("<leader>j", "<cmd>cnext", {desc = "Quick Fix Next"})
