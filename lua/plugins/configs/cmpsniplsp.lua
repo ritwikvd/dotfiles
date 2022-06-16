@@ -9,11 +9,12 @@ return function ()
     require("luasnip.loaders.from_vscode").load()
 
     -- LSP
+    local lspconfig = require("lspconfig")
     local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
     capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-    require("lspconfig").eslint.setup{}
-    require("lspconfig").cssls.setup({capabilities = capabilities})
+    lspconfig.eslint.setup{}
+    lspconfig.cssls.setup({capabilities = capabilities})
 
     local mappings = function()
         vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0})
@@ -29,9 +30,9 @@ return function ()
         vim.keymap.set("n", "<leader>.", vim.lsp.buf.code_action, {buffer=0})
     end
 
-    require("lspconfig").tsserver.setup({capabilities = capabilities, on_attach = mappings})
+    lspconfig.tsserver.setup({capabilities = capabilities, on_attach = mappings})
 
-    require("lspconfig").sumneko_lua.setup{
+    lspconfig.sumneko_lua.setup{
         settings = {
             Lua = {
                 runtime = { version = 'LuaJIT', path = runtime_path },
