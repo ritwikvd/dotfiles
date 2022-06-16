@@ -42,7 +42,7 @@ xset("<leader>r", function ()
     vim.cmd("normal \"zy")
     vim.ui.input({prompt = "Enter replacement string: "}, function (input)
         local reg = vim.fn.getreg("z")
-        if not reg then return end
+        if reg == "" then return end
         vim.cmd("%s/"..reg.."/"..input)
         vim.cmd("normal gv")
     end)
