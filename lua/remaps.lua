@@ -38,8 +38,8 @@ xset("<leader>r", function ()
     local reg = vim.fn.getreg("z") or "testing"
     print("this is the reg"..reg)
     vim.cmd("%s/"..reg.."/"..input)
-end)
-end, {desc = "Move Line Up"})
+end)end)
+
 
 local test = "fasd"
 
