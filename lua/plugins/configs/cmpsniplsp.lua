@@ -13,8 +13,7 @@ return function ()
     capabilities.textDocument.completion.completionItem.snippetSupport = true
 
     require'lspconfig'.eslint.setup{}
-    require'lspconfig'.cssls.setup{
-    capabilities = capabilities}
+    require'lspconfig'.cssls.setup{ capabilities = capabilities}
 
     local mappings = function()
         vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0})
