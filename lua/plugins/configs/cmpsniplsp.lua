@@ -10,8 +10,11 @@ return function ()
 
     -- LSP
     local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+    capabilities.textDocument.completion.completionItem.snippetSupport = true
 
     require'lspconfig'.eslint.setup{}
+    require'lspconfig'.cssls.setup{
+    capabilities = capabilities}
 
     local mappings = function()
         vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0})
