@@ -15,7 +15,7 @@ return function ()
 
     lspconfig.eslint.setup{}
     lspconfig.cssls.setup({capabilities = capabilities,
-     filetypes = {"css", "scss", "less", "typescript"}
+     -- filetypes = {"css", "scss", "less", "typescript"}
     })
 
     local mappings = function()
