@@ -11,7 +11,7 @@ set({"n", "x"}, "<leader>c", "\"+y", {desc = "Copy Into Clipboard"})
 nset("<leader><cr>",
     function ()
         local filepath = vim.fn.expand("%:p")
-        if string.find(filepath, "nvim/plugins/") then require("packer").compile() end
+        if string.find(filepath, "nvim/lua/plugins/") then require("packer").compile() end
         vim.cmd("so %")
     end,
     {desc = "Source file"})
