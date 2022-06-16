@@ -38,7 +38,7 @@ xset("<leader>r", function ()
         local reg = vim.fn.getreg("z")
         if not reg then return end
         vim.cmd("%s/"..reg.."/"..input)
-        vim.cmd("normal gv \<esc\> viw")
+        vim.cmd("normal gv %<esc%> viw")
     end)
 end)
 
