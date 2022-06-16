@@ -33,9 +33,8 @@ nset("<c-n>", "g:NERDTree.IsOpen() ? ':NERDTreeClose<cr>' : @% == '' ? ':NERDTre
 -- xset("J", "<cmd>m '>+1<cr>gv", {desc = "Move Line Down"})
 -- xset("K", "<cmd>m '<-2<cr>gv=gv", {desc = "Move Line Up"})
 xset("<leader>r", function ()
-    vim.cmd("\"zy")
+    -- vim.cmd("\"zy")
     vim.ui.input({prompt = "Enter replacement string: "}, function (input)
-        vim.loop.sleep(2000)
         local reg = vim.fn.getreg("z")
         if not reg then return end
         print("this is the reg"..reg)
