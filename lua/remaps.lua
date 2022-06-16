@@ -40,7 +40,7 @@ xset("<leader>r", function ()
         vim.cmd("%s/"..reg.."/"..input)
         vim.cmd("normal gv")
     end)
-end)
+end, {desc = "Replace all instances of the highlighted text"})
 
 iset("<c-l>", "<cmd>lua require('luasnip').jump(1)<cr>", {desc = "Next Snippet Location"})
 iset("<c-h>", "<cmd>lua require('luasnip').jump(-1)<cr>", {desc = "Previous Snippet Location"})
