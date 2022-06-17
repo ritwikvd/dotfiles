@@ -34,7 +34,7 @@ return function ()
 
     lspconfig.tsserver.setup({capabilities = capabilities, on_attach = mappings, settings = {
         tsserver = {
-            plugins = {"typescript-styled-plugin"}
+            plugins = { {name = "typescript-styled-plugin", location = "/opt/homebrew/lib/node_modules/typescript-styled-plugin"} }
         }
     }})
 
