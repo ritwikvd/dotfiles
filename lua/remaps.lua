@@ -50,7 +50,10 @@ end, {desc = "Replace all instances of the highlighted text"})
 
 iset("<c-l>", "<cmd>lua require('luasnip').jump(1)<cr>", {desc = "Next Snippet Location"})
 iset("<c-h>", "<cmd>lua require('luasnip').jump(-1)<cr>", {desc = "Previous Snippet Location"})
-iset("<c-{>", "{<cr>", {desc = "Previous Snippet Location"})
+iset("{<cr>", "{<cr><cr>}<esc>ki<tab>", {desc = "Indent"})
 
 sset("<c-l>", "<cmd>lua require('luasnip').jump(1)<cr>", {desc = "Next Snippet Location"})
 sset("<c-h>", "<cmd>lua require('luasnip').jump(-1)<cr>", {desc = "Previous Snippet Location"})
+local a = {
+
+}
