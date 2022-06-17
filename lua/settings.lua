@@ -9,6 +9,7 @@ o.scrolloff = 12
 o.rnu = true; o.nu = true
 o.tabstop = 4; o.softtabstop = 4; o.shiftwidth = 4; o.expandtab = true
 o.smartindent = true
+o.autoindent = true
 o.ic = true; o.is = true; o.hls = false
 o.background = "light"
 o.signcolumn = "yes"
@@ -38,3 +39,6 @@ for type, icon in pairs(signs) do
     local hl = "DiagnosticSign" .. type
     vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
+
+local a = {
+}
