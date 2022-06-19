@@ -44,7 +44,7 @@ return require("packer").startup(function (use)
         "rafamadriz/friendly-snippets"
     }})
 
-    use("~/nvplugins/test")
+    use("/Users/ritwik/nvplugins/test")
 
 end)
 
