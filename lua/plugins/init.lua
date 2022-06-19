@@ -3,7 +3,7 @@ local commentconfig = require("plugins.configs.comment")
 local deviconsconfig = require("plugins.configs.devicons")
 local telescopeconfig = require("plugins.configs.telescope")
 local cmpsniplspconfig = require("plugins.configs.cmpsniplsp")
-local felineconfig = require("plugins.configs.feline")
+-- local felineconfig = require("plugins.configs.feline")
 
 return require("packer").startup(function (use)
 
@@ -22,6 +22,7 @@ return require("packer").startup(function (use)
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", config = treesitterconfig})
     use({ "kyazdani42/nvim-web-devicons", config = deviconsconfig })
     use({ "numToStr/Comment.nvim", config = commentconfig })
+    use({"windwp/nvim-ts-autotag", config = function () require("nvim-ts-autotag").setup() end})
 
     use({ "nvim-telescope/telescope.nvim",
     config = telescopeconfig,
