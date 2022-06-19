@@ -37,8 +37,8 @@ nset("<leader>O", "<cmd>lua require('telescope.builtin').live_grep({grep_open_fi
 nset("<leader>F", "<cmd>Telescope live_grep<cr>", {desc = "Telescope Live Grep"})
 nset("<c-n>", "g:NERDTree.IsOpen() ? ':NERDTreeClose<cr>' : @% == '' ? ':NERDTreeOpen<cr>' : ':NERDTreeFind<cr>'", {expr = true, desc = "NERDTree Working"})
 nset(":", "q:", {desc = "Open Command In Editable Mode"})
-nset("/", "q/", {desc = "Open Search In Editable Mode"})
-nset("?", "q?", {desc = "Open Backwards Search In Editable Mode"})
+-- nset("/", "q/", {desc = "Open Search In Editable Mode"})
+-- nset("?", "q?", {desc = "Open Backwards Search In Editable Mode"})
 
 -- xset("J", "<cmd>m '>+1<cr>gv", {desc = "Move Line Down"})
 -- xset("K", "<cmd>m '<-2<cr>gv=gv", {desc = "Move Line Up"})
