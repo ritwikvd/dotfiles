@@ -17,6 +17,7 @@ nset("<leader><cr>",
     {desc = "Source file"})
 nset("<leader>p", "<cmd>Telescope git_files<cr>", {desc = "Open Git Files"})
 nset("<leader>P", "<cmd>Telescope find_files<cr>", {desc = "Open All Files"})
+nset("<leader>H", "<cmd>Telescope help_tags<cr>", {desc = "Open Telescope Help Tags"})
 nset("<leader>j", "<cmd>cnext", {desc = "Quick Fix Next"})
 nset("<leader>k", "<cmd>cprev", {desc = "Quick Fix Previous"})
 nset("<leader>o", "<cmd>Telescope quickfix<cr>", {desc = "Open Telescope Quickfix"})
