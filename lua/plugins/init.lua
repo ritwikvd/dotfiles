@@ -23,7 +23,7 @@ return require("packer").startup(function (use)
     use({"kyazdani42/nvim-web-devicons", config = deviconsconfig })
     use({"numToStr/Comment.nvim", config = commentconfig })
     use({"windwp/nvim-ts-autotag", config = function () require("nvim-ts-autotag").setup() end})
-    use({"windwp/nvim-autopairs", config = function () require("nvim-autopairs").setup({}) end})  
+    use({"windwp/nvim-autopairs", config = function () require("nvim-autopairs").setup({}) end})
 
     use({ "nvim-telescope/telescope.nvim",
     config = telescopeconfig,
