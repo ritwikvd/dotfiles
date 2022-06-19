@@ -22,7 +22,7 @@ return require("packer").startup(function (use)
     use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate", config = treesitterconfig})
     use({"kyazdani42/nvim-web-devicons", config = deviconsconfig })
     use({"numToStr/Comment.nvim", config = commentconfig })
-    use({"windwp/nvim-ts-autotag", config = function () require("nvim-ts-autotag").setup() end})
+    -- use({"windwp/nvim-ts-autotag", config = function () require("nvim-ts-autotag").setup() end})
     -- use({"windwp/nvim-autopairs", config = function () require("nvim-autopairs").setup({}) end})
 
     use({ "nvim-telescope/telescope.nvim",
