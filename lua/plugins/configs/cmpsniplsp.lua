@@ -32,6 +32,11 @@ local mappings = function()
     vim.keymap.set("n", "<leader>.", vim.lsp.buf.code_action, {buffer=0})
 end
 
+lspconfig.clangd.setup({
+    capabilities = capabilities,
+    on_attach = mappings
+})
+
 lspconfig.tsserver.setup({
     capabilities = capabilities,
     on_attach = mappings,
