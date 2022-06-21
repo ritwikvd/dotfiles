@@ -34,7 +34,7 @@
     spu = stash push
     can = commit --amend --no-edit
     cp = cherry-pick
-    cl = clean -fd
+    cn = clean -fd
     acp = "!acp"
     sacp = "!sacp"
     db = "!db"
