@@ -31,3 +31,9 @@ pattern = "*.tsx,*.ts,*.jsx,*.js",
 group = creategroup("eslint"),
 command = "EslintFixAll"
 })
+
+createcmd("BufWritePre", {
+pattern = "*.c,*.cpp",
+group = creategroup("clang-tidy"),
+command = "!/opt/homebrew/Cellar/llvm/13.0.1_1/bin/clang-tidy % --fix-errors"
+})
