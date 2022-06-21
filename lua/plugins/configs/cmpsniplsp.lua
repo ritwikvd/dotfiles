@@ -34,8 +34,8 @@ end
 
 lspconfig.clangd.setup({
     capabilities = capabilities,
-    on_attach = mappings
-    cmd = {"clangd -fixit"}
+    on_attach = mappings,
+    cmd = {"clangd"}
 })
 
 lspconfig.tsserver.setup({
