@@ -32,8 +32,8 @@ group = creategroup("eslint"),
 command = "EslintFixAll"
 })
 
--- createcmd("BufWritePost", {
--- pattern = "*.c,*.cpp",
--- group = creategroup("clang-tidy"),
--- command = "silent! execute \"!clang-tidy % --fix --fix-errors\" | redraw!"
--- })
+createcmd("BufWritePost", {
+pattern = "*.c,*.cpp",
+group = creategroup("clang-tidy"),
+command = "silent! execute \"!clang-tidy % --fix-errors\" | redraw!"
+})
