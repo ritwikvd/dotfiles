@@ -35,5 +35,5 @@ command = "EslintFixAll"
 createcmd("BufWritePost", {
 pattern = "*.c,*.cpp",
 group = creategroup("clang-tidy"),
-command = "!/opt/homebrew/Cellar/llvm/13.0.1_1/bin/clang-tidy % --fix-errors"
+command = "silent! execute \"!/opt/homebrew/Cellar/llvm/13.0.1_1/bin/clang-tidy % --fix-errors\" | redraw!"
 })
