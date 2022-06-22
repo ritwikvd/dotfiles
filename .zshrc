@@ -12,7 +12,7 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 bindkey -v
 bindkey '^[b' backward-word
 bindkey '^R' history-incremental-search-backward
-bindkey '^I' autosuggest-accept
+bindkey '^a' autosuggest-accept
 
 # ZSH Aliases
 alias -g ls="ls -Flsah"
