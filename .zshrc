@@ -6,9 +6,12 @@ function set_win_title(){
 
 precmd_functions+=(set_win_title)
 
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 bindkey -v
 bindkey '^[b' backward-word
 bindkey '^R' history-incremental-search-backward
+bindkey '^I' autosuggest-accept
 
 # ZSH Aliases
 alias -g ls="ls -Flsah"
