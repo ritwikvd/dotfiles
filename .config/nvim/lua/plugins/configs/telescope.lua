@@ -8,7 +8,7 @@ return function ()
                     ["<leader>v"] = "select_vertical"
                 }
             },
-            borderchars = { "─", "│", "─", "│", "┌", " ", " ", " " }
+            borderchars = { "─", "│", "─", "│", "┌", "┐","┘", "└" }
 
         },
         extensions = {
