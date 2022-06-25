@@ -11,7 +11,7 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 bindkey -v
 bindkey '^[b' backward-word
-bindkey '^R' history-incremental-search-backward
+# bindkey '^R' history-incremental-search-backward
 bindkey '^a' autosuggest-accept
 
 # ZSH Aliases
