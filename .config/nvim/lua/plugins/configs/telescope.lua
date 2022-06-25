@@ -7,7 +7,9 @@ return function ()
                 n = {
                     ["<leader>v"] = "select_vertical"
                 }
-            }
+            },
+            borderchars = { "─", "│", "─", "│", "", "", "", "" }
+
         },
         extensions = {
             ["ui-select"] = {
