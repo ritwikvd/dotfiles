@@ -13,6 +13,7 @@ bindkey -v
 bindkey '^[b' backward-word
 # bindkey '^R' history-incremental-search-backward
 bindkey '^a' autosuggest-accept
+bindkey '^e' fzf-cd-widget
 
 # ZSH Aliases
 alias -g ls="ls -Flsah"
@@ -24,3 +25,5 @@ alias -g tm="tmux"
 alias -g nv="nvim"
 alias -g gbin="cd /usr/local/bin/"
 alias -g nconf="cd ~/.config/nvim/ && nv ."
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
