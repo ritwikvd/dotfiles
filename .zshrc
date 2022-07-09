@@ -13,7 +13,7 @@ bindkey -v
 bindkey '^[b' backward-word
 # bindkey '^R' history-incremental-search-backward
 bindkey '^a' autosuggest-accept
-bindkey '^e' fzf-cd-widget
+# bindkey '^e' fzf-cd-widget
 
 # ZSH Aliases
 alias -g ls="ls -Flsah"
