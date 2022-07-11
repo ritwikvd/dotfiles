@@ -3,8 +3,6 @@ local creategroup = function (...)
 end
 
 local createcmd = vim.api.nvim_create_autocmd
-local clearcmd = vim.api.nvim_clear_autocmds
-
 local home = "/Users/ritwik"
 
 local patternstring = string.gsub("~/.config/**/*,~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc,~/.tmux.conf,/usr/local/bin/*", "~", home)
