@@ -43,5 +43,5 @@ local previewpath = home.."/Desktop/personal/pushowl/.github/actions/get-preview
 createcmd("BufWritePost", {
 pattern = previewpath.."/index.js",
 group = creategroup("get-preview"),
-command = "silent! execute \"!npx @vercel/ncc build "..previewpath.."/index.js -o "..previewpath.."/dist\" | redraw!"
+command = "silent! execute \"!npx @vercel/ncc build "..previewpath.."/index.js -o "..previewpath.."/dist\""
 })
