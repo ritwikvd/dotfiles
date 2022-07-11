@@ -43,5 +43,5 @@ command = "silent! execute \"!clang-tidy % --fix-errors\" | redraw!"
 createcmd("BufAdd", {
 pattern = "**/*/actions/get-preview/index.js",
 group = creategroup("get-preview"),
-command = "silent! execute \"!npx @vercel/ncc build %:p -o %:p:h/dist -w\""
+command = "silent! execute \"!npx @vercel/ncc build %:p -o %:p:h/dist\""
 })
