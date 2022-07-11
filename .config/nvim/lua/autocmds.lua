@@ -40,7 +40,7 @@ command = "silent! execute \"!clang-tidy % --fix-errors\" | redraw!"
 
 -- local previewpath = home.."/Desktop/personal/pushowl/dashboard/.github/actions/get-preview"
 
-createcmd("BufAdd", {
+createcmd("BufWritePost", {
 pattern = "**/*/actions/get-preview/index.js",
 group = creategroup("get-preview"),
 command = "silent! execute \"!npx @vercel/ncc build %:p -o %:p:h/dist\""
