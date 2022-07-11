@@ -3,6 +3,8 @@ local creategroup = function (...)
 end
 
 local createcmd = vim.api.nvim_create_autocmd
+local clearcmd = vim.api.nvim_clear_autocmds
+
 local home = "/Users/ritwik"
 
 local patternstring = string.gsub("~/.config/**/*,~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc,~/.tmux.conf,/usr/local/bin/*", "~", home)
@@ -40,7 +42,7 @@ command = "silent! execute \"!clang-tidy % --fix-errors\" | redraw!"
 
 -- local previewpath = home.."/Desktop/personal/pushowl/dashboard/.github/actions/get-preview"
 
-createcmd("BufWritePost", {
+createcmd("BufAdd", {
 pattern = "**/*/actions/get-preview/index.js",
 group = creategroup("get-preview"),
 command = "silent! execute \"!npx @vercel/ncc build %:p -o %:p:h/dist -w\""
