@@ -38,10 +38,10 @@ group = creategroup("clang-tidy"),
 command = "silent! execute \"!clang-tidy % --fix-errors\" | redraw!"
 })
 
-local previewpath = home.."/Desktop/personal/pushowl/dashboard/.github/actions/get-preview"
+-- local previewpath = home.."/Desktop/personal/pushowl/dashboard/.github/actions/get-preview"
 
 createcmd("BufWritePost", {
-pattern = previewpath.."/index.js",
+pattern = "**/*/actions/get-preview/index.js",
 group = creategroup("get-preview"),
-command = "silent! execute \"!npx @vercel/ncc build "..previewpath.."/index.js -o "..previewpath.."/dist\""
+command = "silent! execute \"!npx @vercel/ncc build %:p -o %:p:h/dist -w\""
 })
