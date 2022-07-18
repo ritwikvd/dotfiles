@@ -5,6 +5,7 @@ local function nset(...) set("n", ...) end
 local function iset(...) set("i", ...) end
 local function xset(...) set("x", ...) end
 local function sset(...) set("s", ...) end
+local function tset(...) set("t", ...) end
 
 set({"n", "x"}, "<leader>c", "\"+y", {desc = "Copy Into Clipboard"})
 
@@ -57,3 +58,5 @@ iset("<c-h>", "<cmd>lua require('luasnip').jump(-1)<cr>", {desc = "Previous Snip
 
 sset("<c-l>", "<cmd>lua require('luasnip').jump(1)<cr>", {desc = "Next Snippet Location"})
 sset("<c-h>", "<cmd>lua require('luasnip').jump(-1)<cr>", {desc = "Previous Snippet Location"})
+
+tset("<esc>", "<c-\\><c-n>", {desc = "Escape In Terminal Mode"})
