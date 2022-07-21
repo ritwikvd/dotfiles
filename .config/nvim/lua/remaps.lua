@@ -16,7 +16,7 @@ nset("<leader><cr>",
         vim.cmd("so %")
     end,
     {desc = "Source file"})
-nset("<leader>P", "<cmd>lua require('telescope.builtin').find_files()<cr>", {desc = "Open All Files"})
+nset("<leader>P", "<cmd>lua require('telescope.builtin').find_files({hidden = true})<cr>", {desc = "Open All Files"})
 nset("<leader>H", "<cmd>lua require('telescope.builtin').help_tags()<cr>", {desc = "Open Telescope Help Tags"})
 nset("<leader>o", "<cmd>lua require('telescope.builtin').quickfix()<cr>", {desc = "Open Telescope Quickfix"})
 nset("<leader>F", "<cmd>lua require('telescope.builtin').live_grep()<cr>", {desc = "Telescope Live Grep"})
