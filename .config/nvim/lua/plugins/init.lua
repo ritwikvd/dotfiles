@@ -10,7 +10,18 @@ return require("packer").startup(function (use)
     use("wbthomason/packer.nvim")
     use("nvim-lua/plenary.nvim")
     use("preservim/nerdtree")
-    use("gruvbox-community/gruvbox")
+
+    -- Themes
+    -- use("gruvbox-community/gruvbox")
+    use({
+    'rose-pine/neovim',
+    as = 'rose-pine',
+    tag = 'v1.*',
+    config = function()
+        vim.cmd('colorscheme rose-pine')
+    end
+})
+
     use("neovim/nvim-lspconfig")
     -- use({ "ryanoasis/vim-devicons", disabled = true})
     use("tpope/vim-surround")
