@@ -14,7 +14,7 @@ return require("packer").startup(function (use)
     -- Themes
     -- use("gruvbox-community/gruvbox")
     use { "catppuccin/nvim", as = "catppuccin", config = function ()
-        vim.g.catppuccin_flavour = "macchiato"
+        vim.g.catppuccin_flavour = "latte"
         vim.cmd [[colorscheme catppuccin]]
     end }
 
