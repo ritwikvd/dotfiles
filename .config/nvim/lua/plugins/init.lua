@@ -13,14 +13,10 @@ return require("packer").startup(function (use)
 
     -- Themes
     -- use("gruvbox-community/gruvbox")
-    use({
-    'rose-pine/neovim',
-    as = 'rose-pine',
-    tag = 'v1.*',
-    config = function()
-        vim.cmd('colorscheme rose-pine')
-    end
-})
+    use { "catppuccin/nvim", as = "catppuccin", config = function ()
+        vim.g.catppuccin_flavour = "macchiato"
+        vim.cmd [[colorscheme catppuccin]]
+    end }
 
     use("neovim/nvim-lspconfig")
     -- use({ "ryanoasis/vim-devicons", disabled = true})
