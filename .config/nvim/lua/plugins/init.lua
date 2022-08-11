@@ -12,7 +12,7 @@ return require("packer").startup(function (use)
     use("preservim/nerdtree")
 
     -- Themes
-    use("gruvbox-community/gruvbox")
+    -- use("gruvbox-community/gruvbox")
     use("Mofiqul/vscode.nvim")
 
     use("neovim/nvim-lspconfig")
