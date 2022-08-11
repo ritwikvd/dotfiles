@@ -1,5 +1,5 @@
 vim.cmd([[
-colorscheme gruvbox
+" colorscheme gruvbox
 hi CursorLineNr guifg=DarkMagenta
 
 xnoremap J :m '>+1<CR>gv=gv
