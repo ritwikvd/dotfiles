@@ -13,6 +13,7 @@ return require("packer").startup(function (use)
 
     -- Themes
     use("gruvbox-community/gruvbox")
+    use("Mofiqul/vscode.nvim")
 
     use("neovim/nvim-lspconfig")
     -- use({ "ryanoasis/vim-devicons", disabled = true})
