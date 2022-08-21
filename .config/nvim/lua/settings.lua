@@ -11,7 +11,7 @@ o.tabstop = 4; o.softtabstop = 4; o.shiftwidth = 4; o.expandtab = true
 o.smartindent = true
 o.autoindent = true
 o.ic = true; o.is = true; o.hls = false
-o.background = "dark"
+o.background = "light"
 o.signcolumn = "yes"
 o.termguicolors = true
 o.list = true; o.lcs = "tab:| "
