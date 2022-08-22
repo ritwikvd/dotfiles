@@ -1,5 +1,5 @@
 vim.cmd([[
-hi CursorLineNr guifg=DarkMagenta
+" hi CursorLineNr guifg=DarkMagenta
 hi Cursor guibg=#11f0c3
 hi MatchParen guibg=none
 
