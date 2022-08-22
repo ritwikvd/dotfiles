@@ -18,7 +18,7 @@ nset("<leader><cr>",
     {desc = "Source file"})
 nset("<leader>P", "<cmd>lua require('telescope.builtin').find_files({hidden = true, no_ignore = true})<cr>", {desc = "Open All Files"})
 nset("<leader>H", "<cmd>lua require('telescope.builtin').help_tags()<cr>", {desc = "Open Telescope Help Tags"})
-nset("<leader>o", "<cmd>lua require('telescope.builtin').quickfix()<cr>", {desc = "Open Telescope Quickfix"})
+nset("<leader>o", "<cmd>lua require('telescope.builtin').quickfix({initial_mode = 'normal'})<cr>", {desc = "Open Telescope Quickfix"})
 nset("<leader>F", "<cmd>lua require('telescope.builtin').live_grep()<cr>", {desc = "Telescope Live Grep"})
 nset("<leader>p", "<cmd>lua require('telescope.builtin').git_files()<cr>", {desc = "Open Telescope Buffers"})
 nset("<leader>b", "<cmd>lua require('telescope.builtin').buffers({initial_mode = 'normal'})<cr>", {desc = "Open Telescope Buffers"})
