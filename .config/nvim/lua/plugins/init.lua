@@ -3,6 +3,7 @@ local commentconfig = require("plugins.configs.comment")
 local deviconsconfig = require("plugins.configs.devicons")
 local telescopeconfig = require("plugins.configs.telescope")
 local cmpsniplspconfig = require("plugins.configs.cmpsniplsp")
+local vscodeconfig = require("plugins.configs.vscodeconfig")
 -- local felineconfig = require("plugins.configs.feline")
 
 return require("packer").startup(function (use)
@@ -12,7 +13,6 @@ return require("packer").startup(function (use)
     use("preservim/nerdtree")
 
     -- Themes
-    -- use("gruvbox-community/gruvbox")
     use({ "Mofiqul/vscode.nvim", config = function () require("vscode").change_style("light") end })
 
     use("neovim/nvim-lspconfig")
