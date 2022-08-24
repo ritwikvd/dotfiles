@@ -9,8 +9,7 @@ local function tset(...) set("t", ...) end
 
 set({"n", "x"}, "<leader>c", "\"+y", {desc = "Copy Into Clipboard"})
 
-nset("<leader>bl", "<cmd>set background=light<cr>")
-nset("<leader>bd", "<cmd>set background=dark<cr>")
+nset("<leader>bl", "<cmd>lua print(\"hello from vim cmd line\")")
 nset("<leader><cr>",
     function ()
         local filepath = vim.fn.expand("%:p")
