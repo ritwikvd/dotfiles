@@ -4,7 +4,7 @@ return function ()
     .setup({
         group_overrides = {
             Cursor = { fg = c.vscDarkBlue, bg = "#aeafad" , bold = false },
-            CursorLine = {bg = "#eeeeee"}
+            CursorLine = {bg = "#eeeeee"},
             MatchParen = {bg = "none"}
         }
     })
