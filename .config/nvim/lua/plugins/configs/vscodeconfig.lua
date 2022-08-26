@@ -3,7 +3,8 @@ return function ()
     require("vscode")
     .setup({
         group_overrides = {
-            Cursor = { fg = c.vscDarkBlue, bg = "#cdf7f3" , bold = false },
+            Cursor = { fg = c.vscDarkBlue, bg = "#aeafad" , bold = false },
+            CursorLine = {bg = "#eeeeee"}
             MatchParen = {bg = "none"}
         }
     })
