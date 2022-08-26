@@ -15,7 +15,7 @@ command = "silent! !up %:p"
 })
 
 createcmd("BufWritePost", {
-pattern = home.."/Desktop/personal/pushowl/**/*",
+pattern = "*.tsx,*.ts,*.jsx,*.js",
 group = creategroup("prettier"),
 command = "silent! execute \"!npx --silent prettier --write --loglevel silent --config ~/.prettierrc %:p\" | redraw!"
 })
