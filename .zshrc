@@ -16,7 +16,6 @@ bindkey -s '^e' 'cd $(fd -H -t d | fzf)\r'
 
 # ZSH Aliases
 alias -g ls="ls -Flsah"
-alias -g cddash="cd ~/Desktop/personal/pushowl/dashboard/"
 alias -g lctl="launchctl"
 alias -g cl="clear"
 alias -g fd="fd -c never"
