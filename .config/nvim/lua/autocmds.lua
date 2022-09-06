@@ -38,6 +38,11 @@ group = creategroup("clang-tidy"),
 command = "silent! execute \"!clang-tidy % --fix-errors\" | redraw!"
 })
 
+createcmd("BufEnter", {
+pattern = "*.c,*.cpp",
+group = creategroup("clang-tidy"),
+command = "silent! execute \"!clang-tidy % --fix-errors\" | redraw!"
+})
 -- local previewpath = home.."/Desktop/personal/pushowl/dashboard/.github/actions/get-preview"
 
 createcmd("BufWritePost", {
