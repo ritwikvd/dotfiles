@@ -5,7 +5,7 @@ end
 local createcmd = vim.api.nvim_create_autocmd
 local home = "/Users/ritwik"
 
-local patternstring = string.gsub("~/.config/**/*,~/.gitconfig,~/.vimrc,~/.prettierrc,~/.zshrc,~/.tmux.conf,/usr/local/bin/*", "~", home)
+local patternstring = string.gsub("~/.config/**/*,~/.gitconfig,~/.vimrc,~/.clang-format,~/.prettierrc,~/.zshrc,~/.tmux.conf,/usr/local/bin/*", "~", home)
 local patternlist = vim.split(patternstring, ",")
 
 createcmd("BufWritePost", {
