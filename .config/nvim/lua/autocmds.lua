@@ -40,8 +40,8 @@ command = "silent! execute \"!clang-tidy % --fix-errors\" | redraw!"
 
 createcmd("BufEnter", {
 pattern = "*.c,*.cpp",
-group = creategroup("clang-tidy"),
-command = "silent! execute \"!clang-tidy % --fix-errors\" | redraw!"
+group = creategroup("clang-format"),
+command = "silent! execute \"!clang-format -i --style='file:~/.clang-format' %\" | redraw!"
 })
 -- local previewpath = home.."/Desktop/personal/pushowl/dashboard/.github/actions/get-preview"
 
