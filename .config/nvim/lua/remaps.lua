@@ -14,9 +14,8 @@ nset("<leader><cr>",
         local filepath = vim.fn.expand("%:p")
         if string.find(filepath, "nvim/lua/plugins/") then require("packer").sync() end
         vim.cmd("so %")
-    end,
-    {desc = "Source file"})
-    nset("<leader>p", "<cmd>lua require('telescope.builtin').git_files()<cr>", {desc = "Open Telescope Buffers"})
+    end, {desc = "Source file"})
+nset("<leader>p", "<cmd>lua require('telescope.builtin').git_files()<cr>", {desc = "Open Telescope Buffers"})
 nset("<leader>P", "<cmd>lua require('telescope.builtin').find_files({hidden = true, no_ignore = true})<cr>", {desc = "Open All Files"})
 nset("<leader>H", "<cmd>lua require('telescope.builtin').help_tags()<cr>", {desc = "Open Telescope Help Tags"})
 nset("<leader>o", "<cmd>lua require('telescope.builtin').quickfix({initial_mode = 'normal'})<cr>", {desc = "Open Telescope Quickfix"})
