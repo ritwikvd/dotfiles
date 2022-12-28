@@ -58,4 +58,4 @@ iset("<c-h>", "<cmd>lua require('luasnip').jump(-1)<cr>", {desc = "Previous Snip
 sset("<c-l>", "<cmd>lua require('luasnip').jump(1)<cr>", {desc = "Next Snippet Location"})
 sset("<c-h>", "<cmd>lua require('luasnip').jump(-1)<cr>", {desc = "Previous Snippet Location"})
 
--- tset("<esc>", "<c-\\><c-n>", {desc = "Escape In Terminal Mode"})
+tset("<c-c>", "<c-\\><c-n>", {desc = "Escape In Terminal Mode"})
