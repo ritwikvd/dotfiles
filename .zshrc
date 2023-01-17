@@ -23,6 +23,6 @@ alias -g tm="tmux"
 alias -g nv="nvim"
 alias -g gbin="cd /usr/local/bin/"
 alias -g nconf="cd ~/.config/nvim/ && nv ."
-alias -g hf="hyperfine"
+alias -g hf="hyperfine --runs 5 --warmup 10 -N"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
