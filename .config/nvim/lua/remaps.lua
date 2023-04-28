@@ -51,6 +51,8 @@ xset("<leader>r", function ()
         vim.cmd("normal gv")
     end)
 end, {desc = "Replace all instances of the highlighted text"})
+xset("<leader>h", "_", {desc = "Go To First Non-Space"})
+xset("<leader>l", "$", {desc = "Go To End Of Line"})
 
 iset("<c-l>", "<cmd>lua require('luasnip').jump(1)<cr>", {desc = "Next Snippet Location"})
 iset("<c-h>", "<cmd>lua require('luasnip').jump(-1)<cr>", {desc = "Previous Snippet Location"})
