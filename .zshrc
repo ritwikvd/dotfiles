@@ -26,3 +26,6 @@ alias -g nconf="cd ~/.config/nvim/ && nv ."
 alias -g hf="hyperfine --runs 5 --warmup 10 -N"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+autoload -Uz compinit && compinit
