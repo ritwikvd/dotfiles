@@ -21,10 +21,11 @@ o.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait250-blink
 o.completeopt = "menu,menuone,noselect"
 
 if (string.find(vim.api.nvim_buf_get_name(0), ".vault")) then
-    o.swapfile = false
-    o.backup = false
-    o.writebackup = false
-
+    ol.swapfile = false
+    ol.backup = false
+    ol.writebackup = false
+    ol.viminfo = ""
+    ol.clipboard = ""
 end
 
 g.netrw_bufsettings = "noma nomod nonu nowrap ro nobl nu rnu"
