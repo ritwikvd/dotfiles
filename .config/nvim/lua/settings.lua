@@ -21,6 +21,7 @@ o.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait250-blink
 o.completeopt = "menu,menuone,noselect"
 
 if (string.find(vim.api.nvim_buf_get_name(0), "%.vault", 1, true)) then
+    print("vault found")
     ol.swapfile = false
     ol.backup = false
     ol.writebackup = false
