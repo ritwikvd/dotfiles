@@ -25,6 +25,7 @@ alias -g gbin="cd /usr/local/bin/"
 alias -g nconf="cd ~/.config/nvim/ && nv ."
 alias -g hf="hyperfine --runs 5 --warmup 10 -N"
 alias -g av="ansible-vault"
+alias -g pbclear="pbcopy < /dev/null"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
