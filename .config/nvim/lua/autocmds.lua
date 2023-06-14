@@ -47,7 +47,7 @@ command = "silent! execute \"!/opt/homebrew/Cellar/llvm/15.0.7_1/bin/clang-forma
 createcmd({ "BufEnter" }, {
 pattern = ".vault",
 group = creategroup("vault"),
-command = "silent! execute \"!/opt/homebrew/Cellar/llvm/15.0.7_1/bin/clang-format -i --style='file:/Users/ritwik/.clang-format' %\" | redraw!"
+command = "setlocal noswapfile nobackup nowritebackup viminfo= clipboard="
 })
 
 -- local previewpath = home.."/Desktop/personal/pushowl/dashboard/.github/actions/get-preview"
