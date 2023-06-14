@@ -1,5 +1,6 @@
 -- Options
 local o = vim.o
+local ol = vim.opt_local
 
 -- Global Properties
 local g = vim.g
@@ -18,6 +19,13 @@ o.list = true; o.lcs = "tab:| "
 o.cursorline = true
 o.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait250-blinkoff200-blinkon200-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
 o.completeopt = "menu,menuone,noselect"
+
+if (string.find(vim.api.nvim_buf_get_name(0), ".vault")) then
+    o.swapfile = false
+    o.backup = false
+    o.writebackup = false
+
+end
 
 g.netrw_bufsettings = "noma nomod nonu nowrap ro nobl nu rnu"
 g.gruvbox_contrast_list = "hard"
