@@ -20,7 +20,7 @@ o.cursorline = true
 o.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait250-blinkoff200-blinkon200-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
 o.completeopt = "menu,menuone,noselect"
 
-if (string.find(vim.api.nvim_buf_get_name(0), ".vault", 1, true)) then
+if (string.find(vim.api.nvim_buf_get_name(0), "%.vault", 1, true)) then
     ol.swapfile = false
     ol.backup = false
     ol.writebackup = false
