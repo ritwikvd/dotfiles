@@ -1,6 +1,5 @@
 -- Options
 local o = vim.o
-local ol = vim.opt_local
 
 -- Global Properties
 local g = vim.g
@@ -20,15 +19,6 @@ o.cursorline = true
 o.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait250-blinkoff200-blinkon200-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
 o.completeopt = "menu,menuone,noselect"
 
-if (string.find(vim.api.nvim_buf_get_name(0), "%.vault", 1, true)) then
-    print("vault found")
-    ol.swapfile = false
-    ol.backup = false
-    ol.writebackup = false
-    ol.viminfo = ""
-    ol.clipboard = ""
-end
-
 g.netrw_bufsettings = "noma nomod nonu nowrap ro nobl nu rnu"
 g.gruvbox_contrast_list = "hard"
 g.NERDTreeShowLineNumbers = 1
@@ -42,7 +32,6 @@ g.NERDTrimTrailingWhitespace = 1
 g.NERDToggleCheckAllLines = 1
 
 vim.diagnostic.config({virtual_text = true, signs = true, underline = true, update_in_insert = true, severity_sort = false})
-
 
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do
