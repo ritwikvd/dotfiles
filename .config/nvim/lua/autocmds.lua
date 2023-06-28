@@ -11,7 +11,7 @@ local patternlist = vim.split(patternstring, ",")
 createcmd("BufWritePost", {
 pattern = patternlist,
 group = creategroup("bin_dotfiles_sync"),
-command = "silent! !up %:p"
+command = "!up %:p"
 })
 
 createcmd("BufWritePost", {
