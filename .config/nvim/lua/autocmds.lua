@@ -41,7 +41,7 @@ command = "silent! execute \"!/opt/homebrew/Cellar/llvm/15.0.7_1/bin/clang-tidy 
 createcmd({ "BufEnter", "BufWritePost" }, {
 pattern = "*.c,*.cpp",
 group = creategroup("clang-format"),
-command = "silent! execute \"!/opt/homebrew/Cellar/llvm/15.0.7_1/bin/clang-format -i --style='file:/Users/ritwik/.clang-format' %\" | redraw!"
+command = "silent! execute \"!/opt/homebrew/Cellar/llvm/16.0.5/bin/clang-format -i --style='file:/Users/ritwik/.clang-format' %\" | redraw!"
 })
 
 createcmd({ "BufEnter" }, {
