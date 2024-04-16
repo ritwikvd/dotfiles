@@ -14,6 +14,7 @@ return require("packer").startup(function (use)
     use("preservim/nerdtree")
 
     -- Themes
+    require("vscode").load()
     use({ "Mofiqul/vscode.nvim", config = vscodeconfig})
 
     use("neovim/nvim-lspconfig")
@@ -49,8 +50,6 @@ return require("packer").startup(function (use)
     }})
 
     use("/Users/ritwik/nvplugins/test")
-
-    -- require("vscode").load()
 
 end)
 
