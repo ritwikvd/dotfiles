@@ -4,7 +4,7 @@ return function ()
 
     vscode.setup({
         group_overrides = {
-            Cursor = { bg = colors.vscLightBlue, bold = false },
+            Cursor = { bg = "#E0FFFF", bold = false },
             CursorLine = {bg = "#eeeeee"},
             MatchParen = {bg = "#aeafad"}
         }
