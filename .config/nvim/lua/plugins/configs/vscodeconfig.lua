@@ -1,12 +1,11 @@
 return function ()
     local vscode = require("vscode")
-    local colors = require("vscode.colors").get_colors()
 
     vscode.setup({
         group_overrides = {
             Cursor = { bg = "#E0FFFF", bold = false },
-            CursorLine = {bg = "#eeeeee"},
-            MatchParen = {bg = "#aeafad"}
+            CursorLine = {bg = "#EEEEEE"},
+            MatchParen = {bg = "#AEAFAD"}
         }
     })
 
