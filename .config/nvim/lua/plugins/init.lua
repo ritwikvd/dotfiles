@@ -14,8 +14,6 @@ return require("packer").startup(function (use)
     use("preservim/nerdtree")
 
     -- Themes
-    require("vscode").load()
-    print("inside setting up vscode colours")
     use({ "Mofiqul/vscode.nvim", config = vscodeconfig})
 
     use("neovim/nvim-lspconfig")
