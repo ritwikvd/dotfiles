@@ -10,4 +10,5 @@ return function ()
             MatchParen = {bg = "NONE"}
         }
     })
+    vscode.load()
 end
