@@ -14,7 +14,20 @@ return require("packer").startup(function (use)
     use("preservim/nerdtree")
 
     -- Themes
-    use({ "Mofiqul/vscode.nvim", config = vscodeconfig})
+    use({ "Mofiqul/vscode.nvim", config = function ()
+    local vscode = require("vscode")
+    local colors = require("vscode.colors").get_colors()
+
+    vscode.setup({
+        group_overrides = {
+            Cursor = { fg = colors.vscDarkBlue, bg = "#aeafad" , bold = false },
+            CursorLine = {bg = "#eeeeee"},
+            MatchParen = {bg = "NONE"}
+        }
+    })
+
+    vscode.load()
+end})
 
     use("neovim/nvim-lspconfig")
     -- use({ "ryanoasis/vim-devicons", disabled = true})
