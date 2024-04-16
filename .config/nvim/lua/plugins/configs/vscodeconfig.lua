@@ -4,10 +4,11 @@ return function ()
 
     vscode.setup({
         group_overrides = {
-            Cursor = { fg = colors.vscDarkBlue, bg = "#aeafad" , bold = false },
+            Cursor = { bg = colors.vscLightBlue, bold = false },
             CursorLine = {bg = "#eeeeee"},
-            MatchParen = {bg = "NONE"}
+            MatchParen = {bg = "#aeafad"}
         }
     })
+
     vscode.load()
 end
