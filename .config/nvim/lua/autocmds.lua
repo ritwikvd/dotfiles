@@ -51,7 +51,7 @@ command = "silent! execute \"!/opt/homebrew/Cellar/llvm/" .. llvmversion .. "/bi
 })
 
 createcmd({ "BufEnter" }, {
-pattern = ".vault",
+pattern = ".vault,.cards,.ids,.recovery_codes",
 group = creategroup("vault"),
 command = "setlocal noswapfile nobackup nowritebackup viminfo= clipboard="
 })
