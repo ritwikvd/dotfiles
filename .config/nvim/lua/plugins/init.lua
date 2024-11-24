@@ -48,5 +48,7 @@ return require("packer").startup(function (use)
         "rafamadriz/friendly-snippets"
     }})
 
+    use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
+
 end)
 
