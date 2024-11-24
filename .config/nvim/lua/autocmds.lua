@@ -63,3 +63,9 @@ pattern = "**/*/actions/get-preview/index.js",
 group = creategroup("get-preview"),
 command = "silent! execute \"!npx @vercel/ncc build %:p -o %:p:h/dist\""
 })
+
+createcmd({ "BufEnter" }, {
+pattern = "**/*/coda/*",
+group = creategroup("coda"),
+command = "set textwidth=80"
+})
